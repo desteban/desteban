@@ -1,0 +1,53 @@
+@import 'variables.scss';
+
+.dark {
+	background-color: $fondocardDark;
+	color: $colorparrafoDark;
+
+	h1 {
+		color: $colorparrafoDark;
+	}
+
+	h2 {
+		color: $colorparrafoDark;
+	}
+
+	h3 {
+		color: $colorparrafoDark;
+	}
+
+	h4 {
+		color: $colorparrafoDark;
+	}
+
+	h5 {
+		color: $colorparrafoDark;
+	}
+
+	h6 {
+		color: $colorparrafoDark;
+	}
+
+	a {
+		color: $colorlinksDark;
+	}
+
+	.btn {
+		color: $colorbotonDark;
+		background-color: $fondobotonDark;
+
+		&:hover {
+			box-shadow: none;
+			background-color: #eca04a;
+		}
+	}
+
+	.card {
+		background-color: $fondocardDark;
+		color: $colorparrafoDark;
+
+		&:hover {
+			box-shadow: 0px 5px 10px $sombraDark;
+		}
+	}
+}
