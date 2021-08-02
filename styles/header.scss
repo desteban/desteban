@@ -1,0 +1,54 @@
+@import 'variables.scss';
+
+nav {
+	position: fixed;
+	width: 100%;
+	height: $tamanioheader;
+	top: 0;
+	left: 0;
+	background-color: #0f0e17;
+	color: #eff0f3;
+	z-index: 1;
+	font-size: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.btn-menu {
+		height: $tamanioheader;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		margin: 0px 16px;
+		top: 0;
+		left: 0;
+
+		.material-icons {
+			font-size: 2rem;
+		}
+	}
+
+	.sidenav {
+		position: absolute;
+		height: 100vh;
+		width: 100%;
+		overflow: hidden;
+		background-color: #202124;
+		top: 0;
+		left: -100%;
+		display: flex;
+		flex-direction: column;
+		overflow-y: hidden;
+		transition: all 0.4s;
+		margin-top: $tamanioheader;
+
+		.item {
+			margin: 10px 1rem;
+		}
+
+		&.open {
+			transform: translateX(100%);
+		}
+	}
+}
