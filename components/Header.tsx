@@ -6,10 +6,16 @@ export default class Header extends Component {
 		super(props);
 	}
 
+	componentDidMount() {
+		this.escojerTema();
+
+		this.scroll();
+	}
+
 	render() {
 		return (
 			<header>
-				<nav>
+				<nav id="nav">
 					<div className="btn-menu" id="btn-menu" onClick={() => this.toogleMenu()}>
 						<span id="abrirMenu" className="material-icons click">
 							menu
@@ -19,6 +25,10 @@ export default class Header extends Component {
 						</span>
 					</div>
 					<div className="logo">{`('desteban')`}</div>
+
+					<div className="tema click" id="brightness" onClick={() => this.cambiartema()}>
+						<span className="material-icons">brightness_4</span>
+					</div>
 
 					<div className="sidenav" id="sidenav" onClick={() => this.toogleMenu()}>
 						<Link href="/">
@@ -38,6 +48,52 @@ export default class Header extends Component {
 		);
 	}
 
+	escojerTema() {
+		let tema = localStorage.getItem('tema');
+		let estado;
+
+		if (tema) {
+			estado = JSON.parse(tema);
+		}
+
+		let body = document.querySelector('body');
+		let html = document.querySelector('html');
+
+		if (!estado) {
+			localStorage.setItem('tema', JSON.stringify({ tema: true }));
+		}
+
+		if (estado) {
+			if (!estado.tema) {
+				body?.classList.add('dark');
+				html?.classList.add('dark');
+			}
+		}
+	}
+
+	cambiartema() {
+		let body = document.querySelector('body');
+		let html = document.querySelector('html');
+
+		body?.classList.toggle('dark');
+		html?.classList.toggle('dark');
+		this.validarTema();
+	}
+
+	validarTema() {
+		let local = localStorage.getItem('tema');
+		let estado;
+
+		if (local) {
+			estado = JSON.parse(local);
+		}
+
+		if (estado) {
+			estado.tema = !estado.tema;
+			localStorage.setItem('tema', JSON.stringify(estado));
+		}
+	}
+
 	toogleMenu() {
 		let sidenav = document.getElementById('sidenav');
 		let abrirMenu = document.getElementById('abrirMenu');
@@ -46,5 +102,26 @@ export default class Header extends Component {
 		sidenav?.classList.toggle('open');
 		abrirMenu?.classList.toggle('hide');
 		cerrarMenu?.classList.toggle('hide');
+	}
+
+	scroll() {
+		let ubicacionInicial = window.pageYOffset;
+		let nav = document.getElementById('nav');
+
+		window.onscroll = function () {
+			let movimiento = window.pageYOffset;
+
+			if (nav) {
+				if (movimiento <= ubicacionInicial) {
+					nav.style.top = '0';
+				}
+
+				if (movimiento > ubicacionInicial) {
+					nav.style.top = '-70px';
+				}
+			}
+
+			ubicacionInicial = movimiento;
+		};
 	}
 }

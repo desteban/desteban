@@ -13,6 +13,7 @@ nav {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	transition: all 0.4s;
 
 	.btn-menu {
 		height: $tamanioheader;
@@ -23,6 +24,21 @@ nav {
 		margin: 0px 16px;
 		top: 0;
 		left: 0;
+
+		.material-icons {
+			font-size: 2rem;
+		}
+	}
+
+	.tema {
+		height: $tamanioheader;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		margin: 0px 16px;
+		top: 0;
+		right: 0;
 
 		.material-icons {
 			font-size: 2rem;
