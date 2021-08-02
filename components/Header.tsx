@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import Link from 'next/link';
+import { Enlace } from '.';
 
 export default class Header extends Component {
 	constructor(props: any) {
@@ -20,7 +21,7 @@ export default class Header extends Component {
 						<span id="abrirMenu" className="material-icons click movil-visible">
 							menu
 						</span>
-						<span id="cerrarMenu" className="material-icons hide click">
+						<span id="cerrarMenu" className="material-icons hide click movil-visible">
 							close
 						</span>
 					</div>
@@ -31,17 +32,11 @@ export default class Header extends Component {
 					</div>
 
 					<div className="sidenav" id="sidenav" onClick={() => this.toogleMenu()}>
-						<Link href="/">
-							<a className="item">Inicio</a>
-						</Link>
+						<Enlace href="/" texto="Inicio" className="item"></Enlace>
 
-						<Link href="/">
-							<a className="item">Blog</a>
-						</Link>
+						<Enlace href="/" texto="Blog" className="item"></Enlace>
 
-						<Link href="/">
-							<a className="item">Proyectos</a>
-						</Link>
+						<Enlace href="/" texto="Proyectos" className="item"></Enlace>
 					</div>
 				</nav>
 			</header>
