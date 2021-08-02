@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 
 import code from '../public/code.jpg';
-import { Header } from '../components';
+import { Enlace, Header } from '../components';
 import Card from '../components/Card';
 
 export default function Home() {
@@ -45,17 +45,16 @@ export default function Home() {
 									necessitatibus earum iure. Esse, itaque."
 						>
 							<div className="opciones">
-								<Link href="https://fonts.google.com/icons?selected=Material+Icons">
-									<a target="_blank">
-										<span className="material-icons">public</span>
-									</a>
-								</Link>
+								<Enlace
+									href="https://fonts.google.com/icons?selected=Material+Icons"
+									blanck
+								>
+									<span className="material-icons">public</span>
+								</Enlace>
 
-								<Link href="/">
-									<a>
-										<span className="material-icons">code</span>
-									</a>
-								</Link>
+								<Enlace href="/">
+									<span className="material-icons">code</span>
+								</Enlace>
 							</div>
 						</Card>
 
