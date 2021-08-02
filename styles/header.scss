@@ -17,6 +17,7 @@
 
 	.logo {
 		z-index: 1;
+		font-size: 30px;
 	}
 
 	.btn-menu {
@@ -62,7 +63,7 @@
 		flex-direction: column;
 		overflow-y: hidden;
 		transition: all 0.4s;
-		padding-top: $tamanioheader;
+		margin-top: $tamanioheader;
 
 		.social {
 			display: flex;
