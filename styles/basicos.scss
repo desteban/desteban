@@ -15,8 +15,8 @@ body {
 	transition: all 0.4s;
 }
 
-main {
-	margin-top: $tamanioheader;
+body {
+	padding: 0px 10px;
 }
 
 h1 {
@@ -85,6 +85,10 @@ a {
 
 .click {
 	cursor: pointer;
+}
+
+.espacioHeader {
+	margin-top: $tamanioheader;
 }
 
 @media screen and (max-width: 991px) and (min-width: 601px) {

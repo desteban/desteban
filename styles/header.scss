@@ -1,6 +1,6 @@
 @import 'variables.scss';
 
-nav {
+.nav {
 	position: fixed;
 	width: 100%;
 	height: $tamanioheader;
@@ -15,6 +15,10 @@ nav {
 	align-items: center;
 	transition: all 0.4s;
 
+	.logo {
+		z-index: 1;
+	}
+
 	.btn-menu {
 		height: $tamanioheader;
 		display: flex;
@@ -27,6 +31,7 @@ nav {
 
 		.material-icons {
 			font-size: 2rem;
+			z-index: 1;
 		}
 	}
 
@@ -39,7 +44,6 @@ nav {
 		margin: 0px 16px;
 		top: 0;
 		right: 0;
-		z-index: 1;
 
 		.material-icons {
 			font-size: 2rem;
@@ -51,14 +55,25 @@ nav {
 		height: 100vh;
 		width: 100%;
 		overflow: hidden;
-		background-color: #202124;
+		background-color: #0f0e17;
 		top: 0;
 		left: -100%;
 		display: flex;
 		flex-direction: column;
 		overflow-y: hidden;
 		transition: all 0.4s;
-		margin-top: $tamanioheader;
+		padding-top: $tamanioheader;
+
+		.social {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-around;
+			width: 100%;
+			position: absolute;
+			bottom: $tamanioheader;
+			margin: 1rem 0px;
+		}
 
 		.item {
 			margin: 10px 1rem;
@@ -71,7 +86,7 @@ nav {
 }
 
 @media screen and (min-width: 992px) {
-	nav {
+	.nav {
 		justify-content: space-between;
 
 		.logo {
@@ -83,10 +98,14 @@ nav {
 			left: 0;
 			margin: 0px 3.5rem;
 			height: $tamanioheader;
-			background-color: #0f0e17;
 			flex-direction: row;
 			align-items: center;
 			width: auto;
+			padding-top: 0;
+
+			.social {
+				display: none;
+			}
 
 			&.open {
 				transform: none;
