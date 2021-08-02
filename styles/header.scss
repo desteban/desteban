@@ -39,6 +39,7 @@ nav {
 		margin: 0px 16px;
 		top: 0;
 		right: 0;
+		z-index: 1;
 
 		.material-icons {
 			font-size: 2rem;
@@ -65,6 +66,27 @@ nav {
 
 		&.open {
 			transform: translateX(100%);
+		}
+	}
+}
+
+@media screen and (min-width: 992px) {
+	nav {
+		justify-content: space-between;
+
+		.logo {
+			margin: 0px 1rem;
+		}
+
+		.sidenav {
+			position: relative;
+			left: 0;
+			margin: 0px 3.5rem;
+			height: $tamanioheader;
+			background-color: #0f0e17;
+			flex-direction: row;
+			align-items: center;
+			width: auto;
 		}
 	}
 }

@@ -17,7 +17,7 @@ export default class Header extends Component {
 			<header>
 				<nav id="nav">
 					<div className="btn-menu" id="btn-menu" onClick={() => this.toogleMenu()}>
-						<span id="abrirMenu" className="material-icons click">
+						<span id="abrirMenu" className="material-icons click movil-visible">
 							menu
 						</span>
 						<span id="cerrarMenu" className="material-icons hide click">
