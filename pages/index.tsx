@@ -12,6 +12,18 @@ export default function Home() {
 					consequuntur exercitationem rerum, quo repudiandae blanditiis animi dolor dolore
 					perferendis voluptate. <a href="">Link</a>
 				</p>
+
+				<div>
+					<h2>Botones</h2>
+
+					<button className="btn">Normal</button>
+
+					<button className="btn round">Round</button>
+
+					<button className="btn round small">Small</button>
+
+					<button className="btn round high">High</button>
+				</div>
 			</main>
 		</div>
 	);
