@@ -5,13 +5,16 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p $PORT",
     "lint": "next lint"
   },
   "dependencies": {
+    "material-design-icons": "^3.0.1",
     "next": "11.0.1",
+    "normalize.css": "^8.0.1",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "sass": "^1.37.0"
   },
   "devDependencies": {
     "@types/react": "17.0.15",
