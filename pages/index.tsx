@@ -24,7 +24,7 @@ export default function Home() {
 					</p>
 				</div>
 
-				<div className="contenido">
+				<div>
 					<h2>Botones</h2>
 
 					<button className="btn">Normal</button>
@@ -39,46 +39,48 @@ export default function Home() {
 				<div id="proyectos">
 					<h2>Cards</h2>
 
-					<div className="grid">
-						<Card
-							src="https://images.unsplash.com/photo-1594904351111-a072f80b1a71?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1875&q=80"
-							titulo="Codigo minificado"
-							texto="Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+					<div className="contenido">
+						<div className="grid">
+							<Card
+								src="https://images.unsplash.com/photo-1594904351111-a072f80b1a71?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1875&q=80"
+								titulo="Codigo minificado"
+								texto="Lorem ipsum dolor sit, amet consectetur adipisicing elit.
 									Suscipit temporibus inventore, distinctio sequi in asperiores
 									eos quia sed est. Eveniet veniam distinctio non deleniti, quis
 									necessitatibus earum iure. Esse, itaque."
-						>
-							<div className="opciones">
-								<Enlace
-									href="https://fonts.google.com/icons?selected=Material+Icons"
-									blanck
-								>
-									<span className="material-icons">public</span>
-								</Enlace>
+							>
+								<div className="opciones">
+									<Enlace
+										href="https://fonts.google.com/icons?selected=Material+Icons"
+										blanck
+									>
+										<span className="material-icons">public</span>
+									</Enlace>
 
-								<Enlace href="/">
-									<span className="material-icons">code</span>
-								</Enlace>
-							</div>
-						</Card>
+									<Enlace href="/">
+										<span className="material-icons">code</span>
+									</Enlace>
+								</div>
+							</Card>
 
-						<Card
-							src={code}
-							titulo="Codigo"
-							texto="Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+							<Card
+								src={code}
+								titulo="Codigo"
+								texto="Lorem ipsum dolor sit, amet consectetur adipisicing elit.
 									Suscipit temporibus inventore, distinctio sequi in asperiores
 									eos quia sed est. Eveniet veniam distinctio non deleniti, quis
 									necessitatibus earum iure. Esse, itaque."
-						></Card>
+							></Card>
 
-						<Card
-							src="https://images.unsplash.com/photo-1556075798-4825dfaaf498?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=755&q=80"
-							titulo="Git"
-							texto="Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+							<Card
+								src="https://images.unsplash.com/photo-1556075798-4825dfaaf498?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=755&q=80"
+								titulo="Git"
+								texto="Lorem ipsum dolor sit, amet consectetur adipisicing elit.
           Suscipit temporibus inventore, distinctio sequi in asperiores
           eos quia sed est. Eveniet veniam distinctio non deleniti, quis
           necessitatibus earum iure. Esse, itaque."
-						></Card>
+							></Card>
+						</div>
 					</div>
 				</div>
 			</main>
