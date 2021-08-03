@@ -37,7 +37,7 @@ export default class Header extends Component {
 					</div>
 
 					<div className="sidenav" id="sidenav" onClick={() => this.toogleMenu()}>
-						<Enlace href="/" texto="Inicio" className="item"></Enlace>
+						<Enlace href="/" texto="Inicio" className="item espacioHeader"></Enlace>
 
 						<Enlace href="/" texto="Blog" className="item"></Enlace>
 

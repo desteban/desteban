@@ -63,7 +63,7 @@
 		flex-direction: column;
 		overflow-y: hidden;
 		transition: all 0.4s;
-		margin-top: $tamanioheader;
+		// padding: $tamanioheader 10px;
 
 		.social {
 			display: flex;
@@ -72,12 +72,16 @@
 			justify-content: space-around;
 			width: 100%;
 			position: absolute;
-			bottom: $tamanioheader;
+			bottom: 0;
 			margin: 1rem 0px;
 		}
 
 		.item {
 			margin: 10px 1rem;
+
+			&.espacioHeader {
+				margin-top: $tamanioheader;
+			}
 		}
 
 		&.open {
@@ -103,6 +107,10 @@
 			align-items: center;
 			width: auto;
 			padding-top: 0;
+
+			.item.espacioHeader {
+				margin-top: 10px;
+			}
 
 			.social {
 				display: none;
