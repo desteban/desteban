@@ -37,7 +37,7 @@ export default function Home() {
 				</div>
 
 				<div id="proyectos">
-					<h2>Cards</h2>
+					<h2 className="">Cards</h2>
 
 					<div className="contenido">
 						<div className="grid">
