@@ -4,7 +4,12 @@ export default function Footer() {
 	return (
 		<footer className="footer">
 			<Social />
-			<p className="center">Hola</p>
+			<div className="espacio">
+				<p className="center">
+					Hola, si llegaste hasta este punto puedo decir que algo que ha interesado,
+					espero que nos veamos pronto
+				</p>
+			</div>
 		</footer>
 	);
 }

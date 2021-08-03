@@ -38,7 +38,7 @@ export default class Header extends Component {
 					</div>
 
 					<div className="sidenav" id="sidenav" onClick={() => this.toogleMenu()}>
-						<Enlace href="/" texto="Inicio" className="item espacioHeader"></Enlace>
+						<Enlace href="/#" texto="Inicio" className="item espacioHeader"></Enlace>
 
 						<Enlace href="/" texto="Blog" className="item"></Enlace>
 
@@ -97,15 +97,19 @@ export default class Header extends Component {
 	}
 
 	toogleMenu() {
-		let sidenav = document.getElementById('sidenav');
-		let abrirMenu = document.getElementById('abrirMenu');
-		let cerrarMenu = document.getElementById('cerrarMenu');
-		let nav = document.getElementById('nav');
+		let width = window.screen.width;
 
-		sidenav?.classList.toggle('open');
-		abrirMenu?.classList.toggle('hide');
-		cerrarMenu?.classList.toggle('hide');
-		nav?.classList.toggle('active');
+		if (width <= 991) {
+			let sidenav = document.getElementById('sidenav');
+			let abrirMenu = document.getElementById('abrirMenu');
+			let cerrarMenu = document.getElementById('cerrarMenu');
+			let nav = document.getElementById('nav');
+
+			sidenav?.classList.toggle('open');
+			abrirMenu?.classList.toggle('hide');
+			cerrarMenu?.classList.toggle('hide');
+			nav?.classList.toggle('active');
+		}
 	}
 
 	scroll() {
