@@ -50,4 +50,9 @@
 			box-shadow: 0px 5px 10px $sombraDark;
 		}
 	}
+
+	.footer {
+		border-top: 1px solid $fondobotonDark;
+		background-color: $fondocardDark;
+	}
 }

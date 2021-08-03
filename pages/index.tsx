@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 
 import code from '../public/code.jpg';
-import { Enlace, Header } from '../components';
+import { Enlace, Footer, Header } from '../components';
 import Card from '../components/Card';
 
 export default function Home() {
@@ -78,6 +78,8 @@ export default function Home() {
 					</div>
 				</div>
 			</main>
+
+			<Footer />
 		</div>
 	);
 }
