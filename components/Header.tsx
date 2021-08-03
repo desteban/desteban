@@ -6,6 +6,7 @@ import GitHub from '../public/github.svg';
 import Instagram from '../public/instagram-logo.svg';
 import Twitter from '../public/twitter.svg';
 import FaceBook from '../public/facebook-circular-logo.svg';
+import Social from './Social';
 
 export default class Header extends Component {
 	constructor(props: any) {
@@ -43,12 +44,7 @@ export default class Header extends Component {
 
 						<Enlace href="/#proyectos" texto="Proyectos" className="item"></Enlace>
 
-						<div className="social">
-							<Image src={GitHub} alt="Sígueme GitHub" height={32} width={32} />
-							<Image src={Instagram} alt="Sígueme GitHub" height={32} width={32} />
-							<Image src={Twitter} alt="Sígueme GitHub" height={32} width={32} />
-							<Image src={FaceBook} alt="Sígueme GitHub" height={32} width={32} />
-						</div>
+						<Social />
 					</div>
 				</nav>
 			</header>

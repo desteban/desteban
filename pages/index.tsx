@@ -1,6 +1,4 @@
-import Link from 'next/link';
 import Head from 'next/head';
-import Image from 'next/image';
 
 import code from '../public/code.jpg';
 import { Enlace, Footer, Header } from '../components';
@@ -9,16 +7,22 @@ import Card from '../components/Card';
 export default function Home() {
 	return (
 		<div>
+			<Head>
+				<title>David Cubillos</title>
+			</Head>
+
 			<Header />
 
 			<main>
-				<h1 className="espacioHeader">Hola que tal</h1>
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque id quam unde
-					molestias perspiciatis sapiente quibusdam veritatis laborum reiciendis
-					consequuntur exercitationem rerum, quo repudiandae blanditiis animi dolor dolore
-					perferendis voluptate. <a href="">Link</a>
-				</p>
+				<div className="espacioHeader">
+					<h1>Hola que tal</h1>
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque id quam unde
+						molestias perspiciatis sapiente quibusdam veritatis laborum reiciendis
+						consequuntur exercitationem rerum, quo repudiandae blanditiis animi dolor
+						dolore perferendis voluptate. <a href="">Link</a>
+					</p>
+				</div>
 
 				<div className="contenido">
 					<h2>Botones</h2>

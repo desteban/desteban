@@ -19,16 +19,14 @@ body {
 	padding: 0px;
 }
 
-main {
-	padding: 0px 10px;
-}
-
 h1 {
 	font-size: 3rem;
 	font-family: Fira Sans;
 	font-weight: bold;
 	margin-top: 1rem;
 	color: $colortitulos;
+	margin-left: 8px;
+	margin-right: 8px;
 }
 
 h2 {
@@ -36,6 +34,8 @@ h2 {
 	font-family: Fira Sans;
 	font-weight: bold;
 	color: $colortitulos;
+	margin-left: 8px;
+	margin-right: 8px;
 }
 
 h3 {
@@ -43,6 +43,8 @@ h3 {
 	font-family: Fira Sans;
 	font-weight: bold;
 	color: $colortitulos;
+	margin-left: 8px;
+	margin-right: 8px;
 }
 
 h4 {
@@ -50,6 +52,8 @@ h4 {
 	font-family: Fira Sans;
 	font-weight: bold;
 	color: $colortitulos;
+	margin-left: 8px;
+	margin-right: 8px;
 }
 
 h5 {
@@ -57,11 +61,14 @@ h5 {
 	font-family: Fira Sans;
 	font-weight: bold;
 	color: $colortitulos;
+	margin-left: 8px;
+	margin-right: 8px;
 }
 
 p {
 	font-size: 1rem;
 	line-height: 150%;
+	margin: 1rem 10px;
 }
 
 a {
@@ -76,7 +83,7 @@ a {
 }
 
 .contenido {
-	margin: 0px 1rem;
+	margin: 0px 10px;
 }
 
 .round {
@@ -101,6 +108,10 @@ a {
 	align-items: center;
 	justify-content: space-around;
 	width: 100%;
+}
+
+.center {
+	text-align: center;
 }
 
 @media screen and (max-width: 991px) and (min-width: 601px) {
