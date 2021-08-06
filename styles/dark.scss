@@ -1,7 +1,7 @@
 @import 'variables.scss';
 
 .dark {
-	background-color: $fondocardDark;
+	background-color: $fondoDark;
 	color: $colorparrafoDark;
 
 	h1 {
@@ -39,6 +39,15 @@
 		&:hover {
 			box-shadow: none;
 			background-color: rgba($fondobotonDark, 0.5);
+		}
+	}
+
+	.nav {
+		background-color: $fondocardDark;
+		color: $colorparrafoDark;
+
+		.sidenav {
+			background-color: $fondocardDark;
 		}
 	}
 

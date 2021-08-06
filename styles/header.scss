@@ -6,26 +6,33 @@
 	height: $tamanioheader;
 	top: 0;
 	left: 0;
-	background-color: #0f0e17;
-	color: #eff0f3;
+	background-color: $fondo;
+	color: $colortitulos;
 	z-index: 1;
 	font-size: 20px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	transition: all 0.4s;
+	// box-shadow: 0px 0px 10px $sombra;
 
 	.logo {
 		z-index: 1;
 		font-size: 30px;
 		cursor: pointer;
-		color: #eff0f3;
+		transition: all 0.4s;
+
+		&:hover {
+			color: $colorlinks;
+		}
 	}
 
 	a {
+		color: $colorparrafo;
+
 		&:hover {
+			color: $colorlinks;
 			text-decoration: none;
-			transform: scale(1.2);
 		}
 	}
 
@@ -38,11 +45,7 @@
 		margin: 0px 16px;
 		top: 0;
 		left: 0;
-
-		.material-icons {
-			font-size: 2rem;
-			z-index: 1;
-		}
+		z-index: 1;
 	}
 
 	.tema {
@@ -54,9 +57,14 @@
 		margin: 0px 16px;
 		top: 0;
 		right: 0;
+	}
 
-		.material-icons {
-			font-size: 2rem;
+	.material-icons {
+		font-size: 2rem;
+		transition: all 0.4s;
+
+		&:hover {
+			color: $colorlinks;
 		}
 	}
 
@@ -65,7 +73,7 @@
 		height: 100vh;
 		width: 100%;
 		overflow: hidden;
-		background-color: #0f0e17;
+		background-color: $fondo;
 		top: 0;
 		right: -100%;
 		display: flex;
@@ -97,6 +105,12 @@
 @media screen and (min-width: 992px) {
 	.nav {
 		justify-content: space-between;
+
+		a {
+			&:hover {
+				transform: scale(1.2);
+			}
+		}
 
 		.logo {
 			margin: 0px 1rem;

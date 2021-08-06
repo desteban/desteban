@@ -16,7 +16,7 @@ export default class Header extends Component {
 	componentDidMount() {
 		this.escojerTema();
 
-		this.scroll();
+		// this.scroll();
 	}
 
 	render() {
