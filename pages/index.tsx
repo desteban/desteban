@@ -14,7 +14,7 @@ export default function Home() {
 			<Header />
 
 			<main>
-				<div className="espacioHeader">
+				<div>
 					<h1>Hola que tal</h1>
 					<p>
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque id quam unde
@@ -36,8 +36,8 @@ export default function Home() {
 					<button className="btn round high">High</button>
 				</div>
 
-				<div id="proyectos">
-					<h2 className="">Cards</h2>
+				<section id="proyectos">
+					<h2 className="">Proyectos</h2>
 
 					<div className="contenido">
 						<div className="grid">
@@ -82,7 +82,7 @@ export default function Home() {
 							></Card>
 						</div>
 					</div>
-				</div>
+				</section>
 			</main>
 
 			<Footer />

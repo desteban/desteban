@@ -56,3 +56,13 @@
 		background-color: $fondocardDark;
 	}
 }
+
+@media screen and (min-width: 992px) {
+	.dark {
+		.card {
+			.contenido {
+				background-color: rgba($fondocardDark, 0.7);
+			}
+		}
+	}
+}
