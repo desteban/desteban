@@ -19,11 +19,13 @@ export default function Social() {
 				<Mail />
 			</Enlace>
 
-			<div className="icon">
+			<Enlace href="https://twitter.com/dacubillos" blanck>
 				<Twitter className="icon" />
-			</div>
+			</Enlace>
 
-			<Linkedin className="icon" />
+			<Enlace href="https://www.linkedin.com/in/david-cubillos-giraldo-7b502b18b/" blanck>
+				<Linkedin className="icon" />
+			</Enlace>
 		</div>
 	);
 }
