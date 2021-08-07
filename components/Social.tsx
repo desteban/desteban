@@ -12,21 +12,18 @@ export default function Social() {
 	return (
 		<div className="social">
 			<Enlace href="https://github.com/desteban" blanck>
-				<Image src={GitHub} alt="Sígueme GitHub" height={32} width={32} />
+				<GitHub />
 			</Enlace>
 
 			<Enlace href="mailto:esteban28c@hotmail.com?Subject=Contacto">
-				<Image src={Mail} alt="Envíame un email" height={32} width={32} className="click" />
+				<Mail />
 			</Enlace>
 
-			<Image src={Twitter} alt="Sígueme Twitter" height={32} width={32} className="click" />
-			<Image
-				src={Linkedin}
-				alt="Entra en mi linkedin"
-				height={32}
-				width={32}
-				className="click"
-			/>
+			<div className="icon">
+				<Twitter className="icon" />
+			</div>
+
+			<Linkedin className="icon" />
 		</div>
 	);
 }

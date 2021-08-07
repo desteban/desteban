@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@svgr/webpack": "^5.5.0",
     "material-design-icons": "^3.0.1",
     "next": "11.0.1",
     "normalize.css": "^8.0.1",

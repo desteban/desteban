@@ -113,10 +113,27 @@ a {
 	align-items: center;
 	justify-content: space-around;
 	width: 100%;
+
+	svg {
+		path {
+			fill: $colorparrafoDark;
+			transition: all 0.4s ease-in-out;
+		}
+
+		&:hover {
+			path {
+				fill: $fondoboton;
+			}
+		}
+	}
 }
 
 .center {
 	text-align: center;
+}
+
+.icon {
+	cursor: pointer;
 }
 
 @media screen and (max-width: 991px) and (min-width: 601px) {

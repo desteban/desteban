@@ -14,7 +14,7 @@
 	justify-content: center;
 	align-items: center;
 	transition: all 0.4s;
-	// box-shadow: 0px 0px 10px $sombra;
+	box-shadow: 0px 0px 2px $sombra;
 
 	.logo {
 		z-index: 1;
@@ -28,7 +28,7 @@
 	}
 
 	a {
-		color: $colorparrafo;
+		color: $colortitulos;
 
 		&:hover {
 			color: $colorlinks;
@@ -84,7 +84,7 @@
 		.social {
 			position: absolute;
 			bottom: 0;
-			margin: 1rem 0px;
+			margin: $tamanioheader 0px;
 		}
 
 		.item {
@@ -98,6 +98,14 @@
 
 		&.open {
 			transform: translateX(-100%);
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.nav {
+		a {
+			font-size: 1.8rem;
 		}
 	}
 }
