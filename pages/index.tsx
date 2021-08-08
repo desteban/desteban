@@ -24,6 +24,22 @@ export default function Home() {
 					</p>
 				</div>
 
+				<section id="acerca-de-mi">
+					<h2>Acerca de mi</h2>
+				</section>
+
+				<section id="skils">
+					<h2>Skils</h2>
+
+					<ul>
+						<li>Hola</li>
+					</ul>
+
+					<ol>
+						<li>Hola</li>
+					</ol>
+				</section>
+
 				<div>
 					<h2>Botones</h2>
 

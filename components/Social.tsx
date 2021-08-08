@@ -1,11 +1,11 @@
 import Image from 'next/image';
 
-import GitHub from '../public/github.svg';
-import Instagram from '../public/instagram-logo.svg';
-import Twitter from '../public/twitter.svg';
-import FaceBook from '../public/facebook-circular-logo.svg';
-import Linkedin from '../public/linkedin.svg';
-import Mail from '../public/mail.svg';
+import GitHub from '../public/svg/github.svg';
+import Instagram from '../public/svg/instagram-logo.svg';
+import Twitter from '../public/svg/twitter.svg';
+import FaceBook from '../public/svg/facebook-circular-logo.svg';
+import Linkedin from '../public/svg/linkedin.svg';
+import Mail from '../public/svg/mail.svg';
 import { Enlace } from '.';
 
 export default function Social() {
@@ -23,7 +23,7 @@ export default function Social() {
 				<Twitter className="icon" />
 			</Enlace>
 
-			<Enlace href="https://www.linkedin.com/in/david-cubillos-giraldo-7b502b18b/" blanck>
+			<Enlace href="https://www.linkedin.com/in/david-cubillos-7b502b18b/" blanck>
 				<Linkedin className="icon" />
 			</Enlace>
 		</div>
