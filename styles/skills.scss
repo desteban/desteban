@@ -1,0 +1,21 @@
+.skills {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	margin: 0px 1rem;
+
+	.skill {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin: 1rem 8px;
+	}
+}
+
+@media screen and (min-width: 600px) {
+	.skills {
+		margin: 0px 8%;
+	}
+}

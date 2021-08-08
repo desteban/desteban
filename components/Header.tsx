@@ -31,7 +31,11 @@ export default class Header extends Component {
 							close
 						</span>
 					</div>
-					<div className="logo">{`('desteban')`}</div>
+					<div className="logo">
+						<span className="orange">{'<'}</span>
+						desteban
+						<span className="orange">{'/>'}</span>
+					</div>
 
 					<div className="tema click" id="brightness" onClick={() => this.cambiartema()}>
 						<span className="material-icons">brightness_4</span>
@@ -43,6 +47,8 @@ export default class Header extends Component {
 						<Enlace href="/" texto="Blog" className="item"></Enlace>
 
 						<Enlace href="/#proyectos" texto="Proyectos" className="item"></Enlace>
+
+						<Enlace href="/#skills" texto="Skills" className="item"></Enlace>
 
 						<Social />
 					</div>

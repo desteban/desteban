@@ -1,7 +1,7 @@
 import Head from 'next/head';
 
 import code from '../public/code.jpg';
-import { Enlace, Footer, Header } from '../components';
+import { Enlace, Footer, Header, Skills } from '../components';
 import Card from '../components/Card';
 
 export default function Home() {
@@ -28,16 +28,10 @@ export default function Home() {
 					<h2>Acerca de mi</h2>
 				</section>
 
-				<section id="skils">
-					<h2>Skils</h2>
+				<section id="skills">
+					<h2>skills</h2>
 
-					<ul>
-						<li>Hola</li>
-					</ul>
-
-					<ol>
-						<li>Hola</li>
-					</ol>
+					<Skills />
 				</section>
 
 				<div>
