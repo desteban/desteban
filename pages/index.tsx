@@ -1,7 +1,7 @@
 import Head from 'next/head';
 
 import code from '../public/code.jpg';
-import { Enlace, Footer, Header, Skills } from '../components';
+import { Enlace, Footer, Header, Skills, Social } from '../components';
 import Card from '../components/Card';
 
 export default function Home() {
@@ -29,7 +29,7 @@ export default function Home() {
 				</section>
 
 				<section id="skills">
-					<h2>skills</h2>
+					<h3>skills</h3>
 
 					<Skills />
 				</section>
