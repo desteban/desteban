@@ -1,152 +1,159 @@
-@import 'variables.scss';
+@import "variables.scss";
 
 .nav {
-	position: fixed;
-	width: 100%;
-	height: $tamanioheader;
-	top: 0;
-	left: 0;
-	background-color: $fondo;
-	color: $colortitulos;
-	z-index: 1;
-	font-size: 20px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	transition: all 0.4s;
-	box-shadow: 0px 0px 2px $sombra;
+  position: fixed;
+  width: 100%;
+  height: $tamanioheader;
+  top: 0;
+  left: 0;
+  background-color: $fondo;
+  color: $colortitulos;
+  z-index: 1;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s;
+  box-shadow: 0px 0px 2px $sombra;
 
-	.logo {
-		z-index: 1;
-		font-size: 30px;
-		cursor: pointer;
-		transition: all 0.4s;
-		font-family: Fira Sans;
-		font-weight: bold;
+  .logo {
+    z-index: 1;
+    font-size: 30px;
+    cursor: pointer;
+    transition: all 0.4s;
+    font-family: Fira Sans;
+    font-weight: bold;
 
-		&:hover {
-			color: $colorlinks;
-		}
-	}
+    &:hover {
+      color: $colorlinks;
+    }
+  }
 
-	a {
-		color: $colortitulos;
+  a.logo {
+    &:hover {
+      transform: none;
+      color: $colortitulos;
+    }
+  }
 
-		&:hover {
-			color: $colorlinks;
-			text-decoration: none;
-		}
-	}
+  a {
+    color: $colortitulos;
 
-	.btn-menu {
-		height: $tamanioheader;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		position: absolute;
-		margin: 0px 16px;
-		top: 0;
-		left: 0;
-		z-index: 1;
-	}
+    &:hover {
+      color: $colorlinks;
+      text-decoration: none;
+    }
+  }
 
-	.tema {
-		height: $tamanioheader;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		position: absolute;
-		margin: 0px 16px;
-		top: 0;
-		right: 0;
-	}
+  .btn-menu {
+    height: $tamanioheader;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    margin: 0px 16px;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
 
-	.material-icons {
-		font-size: 2rem;
-		transition: all 0.4s;
+  .tema {
+    height: $tamanioheader;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    margin: 0px 16px;
+    top: 0;
+    right: 0;
+  }
 
-		&:hover {
-			color: $colorlinks;
-		}
-	}
+  .material-icons {
+    font-size: 2rem;
+    transition: all 0.4s;
 
-	.sidenav {
-		position: absolute;
-		height: 100vh;
-		width: 100%;
-		overflow: hidden;
-		background-color: $fondo;
-		top: 0;
-		right: -100%;
-		display: flex;
-		flex-direction: column;
-		overflow-y: hidden;
-		transition: all 0.4s;
+    &:hover {
+      color: $colorlinks;
+    }
+  }
 
-		.social {
-			position: absolute;
-			bottom: 0;
-			margin: $tamanioheader 0px;
-		}
+  .sidenav {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background-color: $fondo;
+    top: 0;
+    right: -100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+    transition: all 0.4s;
 
-		.item {
-			margin: 10px 1rem;
+    .social {
+      position: absolute;
+      bottom: 0;
+      margin: $tamanioheader 0px;
+    }
 
-			&.espacioHeader {
-				margin-top: $tamanioheader;
-				padding-top: 0;
-			}
-		}
+    .item {
+      margin: 10px 1rem;
 
-		&.open {
-			transform: translateX(-100%);
-		}
-	}
+      &.espacioHeader {
+        margin-top: $tamanioheader;
+        padding-top: 0;
+      }
+    }
+
+    &.open {
+      transform: translateX(-100%);
+    }
+  }
 }
 
 @media screen and (max-width: 991px) {
-	.nav {
-		a {
-			font-size: 1.8rem;
-		}
-	}
+  .nav {
+    a {
+      font-size: 1.8rem;
+    }
+  }
 }
 
 @media screen and (min-width: 992px) {
-	.nav {
-		justify-content: space-between;
+  .nav {
+    justify-content: space-between;
 
-		a {
-			&:hover {
-				transform: scale(1.2);
-			}
-		}
+    a {
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
 
-		.logo {
-			margin: 0px 1rem;
-		}
+    .logo {
+      margin: 0px 1rem;
+    }
 
-		.sidenav {
-			position: relative;
-			left: 0;
-			margin: 0px 3.5rem;
-			height: $tamanioheader;
-			flex-direction: row;
-			align-items: center;
-			width: auto;
-			padding-top: 0;
+    .sidenav {
+      position: relative;
+      left: 0;
+      margin: 0px 3.5rem;
+      height: $tamanioheader;
+      flex-direction: row;
+      align-items: center;
+      width: auto;
+      padding-top: 0;
 
-			.item.espacioHeader {
-				margin-top: 10px;
-			}
+      .item.espacioHeader {
+        margin-top: 10px;
+      }
 
-			.social {
-				display: none;
-			}
+      .social {
+        display: none;
+      }
 
-			&.open {
-				transform: none;
-			}
-		}
-	}
+      &.open {
+        transform: none;
+      }
+    }
+  }
 }

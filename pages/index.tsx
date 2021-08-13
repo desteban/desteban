@@ -34,18 +34,6 @@ export default function Home() {
 					<Skills />
 				</section>
 
-				<div>
-					<h2>Botones</h2>
-
-					<button className="btn">Normal</button>
-
-					<button className="btn round">Round</button>
-
-					<button className="btn round small">Small</button>
-
-					<button className="btn round high">High</button>
-				</div>
-
 				<section id="proyectos">
 					<h2 className="">Proyectos</h2>
 

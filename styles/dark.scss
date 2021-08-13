@@ -1,77 +1,67 @@
-@import 'variables.scss';
+@import "variables.scss";
 
 .dark {
-	background-color: $fondoDark;
-	color: $colorparrafoDark;
+  background-color: $fondoDark;
+  color: $colorparrafoDark;
 
-	h1 {
-		color: $colorparrafoDark;
-	}
+  @for $i from 1 to 6 {
+    h#{$i} {
+      color: $colortitulosDark;
+    }
+  }
 
-	h2 {
-		color: $colorparrafoDark;
-	}
+  a {
+    color: $colorlinksDark;
+  }
 
-	h3 {
-		color: $colorparrafoDark;
-	}
+  .btn {
+    color: $colorbotonDark;
+    background-color: $fondobotonDark;
 
-	h4 {
-		color: $colorparrafoDark;
-	}
+    &:hover {
+      box-shadow: none;
+      background-color: rgba($fondobotonDark, 0.5);
+    }
+  }
 
-	h5 {
-		color: $colorparrafoDark;
-	}
+  .nav {
+    background-color: $fondocardDark;
+    color: $colorparrafoDark;
 
-	h6 {
-		color: $colorparrafoDark;
-	}
+    .sidenav {
+      background-color: $fondocardDark;
+    }
 
-	a {
-		color: $colorlinksDark;
-	}
+    a.logo {
+      color: $colortitulosDark;
+    }
 
-	.btn {
-		color: $colorbotonDark;
-		background-color: $fondobotonDark;
+    .logo {
+      color: $colortitulosDark;
+    }
+  }
 
-		&:hover {
-			box-shadow: none;
-			background-color: rgba($fondobotonDark, 0.5);
-		}
-	}
+  .card {
+    background-color: $fondocardDark;
+    color: $colorparrafoDark;
 
-	.nav {
-		background-color: $fondocardDark;
-		color: $colorparrafoDark;
+    &:hover {
+      box-shadow: 0px 5px 10px $sombraDark;
+    }
+  }
 
-		.sidenav {
-			background-color: $fondocardDark;
-		}
-	}
-
-	.card {
-		background-color: $fondocardDark;
-		color: $colorparrafoDark;
-
-		&:hover {
-			box-shadow: 0px 5px 10px $sombraDark;
-		}
-	}
-
-	.footer {
-		border-top: 1px solid $fondobotonDark;
-		background-color: $fondocardDark;
-	}
+  .footer {
+    border-top: 1px solid $fondobotonDark;
+    background-color: $fondocardDark;
+  }
 }
 
 @media screen and (min-width: 992px) {
-	.dark {
-		.card {
-			.contenido {
-				background-color: rgba($fondocardDark, 0.7);
-			}
-		}
-	}
+  .dark {
+    .card {
+      .contenido {
+        background-color: rgba($fondocardDark, 0.7);
+      }
+    }
+  }
 }
