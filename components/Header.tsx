@@ -31,11 +31,13 @@ export default class Header extends Component {
 							close
 						</span>
 					</div>
-					<div className="logo">
-						<span className="orange">{'<'}</span>
-						desteban
-						<span className="orange">{'/>'}</span>
-					</div>
+					<Enlace href="/#" className="logo">
+						<div>
+							<span className="orange">{'<'}</span>
+							desteban
+							<span className="orange">{'/>'}</span>
+						</div>
+					</Enlace>
 
 					<div className="tema click" id="brightness" onClick={() => this.cambiartema()}>
 						<span className="material-icons">brightness_4</span>
