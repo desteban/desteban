@@ -15,7 +15,7 @@ export default function Enlace(props: propsEnlace) {
 			<a
 				target={props.blanck ? '_blank' : ''}
 				className={props.className}
-				onClick={() => props.onClick()}
+				onClick={() => props.onClick}
 			>
 				{props.children ? props.children : props.texto}
 			</a>
