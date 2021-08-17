@@ -5,6 +5,8 @@ import code from '../public/code.jpg';
 import { Enlace, Footer, Header, Skills, Social } from '../components';
 import Card from '../components/Card';
 
+import persona from '../public/persona.jpg';
+
 export default function Home() {
 	return (
 		<div>
@@ -19,18 +21,22 @@ export default function Home() {
 					<div className="fondo">
 						<div className="imagen">
 							<Image
-								src={'/Fondo.jpg'}
-								alt="Teclado de fondo"
-								height={200}
-								width={200}
+								src={'/persona.jpg'}
+								alt="Imagen de David Cubillos"
+								height={400}
+								width={400}
 							/>
 						</div>
 						<div className="contenido">
-							<div className="cargo">
+							<div className="trabajo">
 								<span>Desarrollador web</span>
 							</div>
 							<h1>David Cubillos</h1>
-							<p>Un poco de texto el cual hable un poco de mi</p>
+							<p>
+								Un poco de texto el cual hable un poco de mi, tratando que no
+								pasarme de unos 250 caracteres, para que no sea muy extenso
+							</p>
+
 							<Enlace href="/" blanck className="btnlink">
 								Descargar CV
 							</Enlace>
@@ -38,22 +44,8 @@ export default function Home() {
 					</div>
 				</section>
 
-				<div>
-					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque id quam unde
-						molestias perspiciatis sapiente quibusdam veritatis laborum reiciendis
-						consequuntur exercitationem rerum, quo repudiandae blanditiis animi dolor
-						dolore perferendis voluptate. <a href="">Link</a>
-					</p>
-				</div>
-
-				<section id="acerca-de-mi">
-					<h2>Acerca de mi</h2>
-				</section>
-
 				<section id="skills">
-					<h3>skills</h3>
-
+					<h2>skills</h2>
 					<Skills />
 				</section>
 
