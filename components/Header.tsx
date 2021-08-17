@@ -43,14 +43,27 @@ export default class Header extends Component {
 						<span className="material-icons">brightness_4</span>
 					</div>
 
-					<div className="sidenav" id="sidenav" onClick={() => this.toogleMenu()}>
-						<Enlace href="/#" texto="Inicio" className="item espacioHeader"></Enlace>
+					<div className="sidenav" id="sidenav">
+						<Enlace
+							href="/#"
+							texto="Inicio"
+							className="item espacioHeader"
+							onClick={() => this.toogleMenu()}
+						></Enlace>
 
-						<Enlace href="/#skills" texto="Skills" className="item"></Enlace>
+						<Enlace
+							href="/#skills"
+							texto="Skills"
+							className="item"
+							onClick={() => this.toogleMenu()}
+						></Enlace>
 
-						<Enlace href="/#proyectos" texto="Proyectos" className="item"></Enlace>
-
-						<Enlace href="/" texto="Blog" className="item"></Enlace>
+						<Enlace
+							href="/#proyectos"
+							texto="Proyectos"
+							className="item"
+							onClick={() => this.toogleMenu()}
+						></Enlace>
 
 						<Social />
 					</div>

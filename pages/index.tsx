@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Image from 'next/image';
 
 import code from '../public/code.jpg';
 import { Enlace, Footer, Header, Skills, Social } from '../components';
@@ -14,8 +15,30 @@ export default function Home() {
 			<Header />
 
 			<main>
+				<section id="inicio">
+					<div className="fondo">
+						<div className="imagen">
+							<Image
+								src={'/Fondo.jpg'}
+								alt="Teclado de fondo"
+								height={200}
+								width={200}
+							/>
+						</div>
+						<div className="contenido">
+							<div className="cargo">
+								<span>Desarrollador web</span>
+							</div>
+							<h1>David Cubillos</h1>
+							<p>Un poco de texto el cual hable un poco de mi</p>
+							<Enlace href="/" blanck className="btnlink">
+								Descargar CV
+							</Enlace>
+						</div>
+					</div>
+				</section>
+
 				<div>
-					<h1>Hola que tal</h1>
 					<p>
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque id quam unde
 						molestias perspiciatis sapiente quibusdam veritatis laborum reiciendis
