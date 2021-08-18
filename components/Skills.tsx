@@ -1,55 +1,61 @@
 import Image from 'next/image';
 
+import HTML5 from '../public/svg/skills/html.svg';
+import CSS3 from '../public/svg/skills/css.svg';
+import JS from '../public/svg/skills/javascript.svg';
+import NODE from '../public/svg/skills/node.svg';
+import TYPES from '../public/svg/skills/typescript.svg';
+import GIT from '../public/svg/skills/git.svg';
+import SASS from '../public/svg/skills/sass.svg';
+import METERIAL from '../public/svg/skills/materializecss.svg';
+import MySQL from '../public/svg/skills/mysql.svg';
+
 export default function Skills() {
 	return (
 		<div className="skills">
 			<div className="skill">
-				<Image alt="HTML" src={'/svg/skills/html.svg'} height={40} width={40} />
+				<HTML5 height={40} width={40} />
 				<span>HTML</span>
 			</div>
 
 			<div className="skill">
-				<Image alt="CSS 3" src={'/svg/skills/css.svg'} height={40} width={40} />
+				<CSS3 height={40} width={40} />
 				<span>CSS 3</span>
 			</div>
 
 			<div className="skill">
-				<Image alt="JavaScript" src={'/svg/skills/javascript.svg'} height={40} width={40} />
+				<JS height={40} width={40} />
 				<span>JavaScript</span>
 			</div>
 
 			<div className="skill">
-				<Image alt="Node.js" src={'/svg/skills/node.svg'} height={40} width={60} />
+				<NODE height={40} width={60} />
 				<span>Node.js</span>
 			</div>
 
 			<div className="skill">
-				<Image alt="TypeScript" src={'/svg/skills/typescript.svg'} height={40} width={40} />
+				<TYPES height={40} width={40} />
 				<span>TypeScript</span>
 			</div>
 
 			<div className="skill">
-				<Image alt="Git" src={'/svg/skills/git.svg'} height={40} width={40} />
+				<GIT height={40} width={40} />
+
 				<span>Git</span>
 			</div>
 
 			<div className="skill">
-				<Image alt="SASS" src={'/svg/skills/sass.svg'} height={40} width={60} />
+				<SASS height={40} width={60} />
 				<span>SASS</span>
 			</div>
 
 			<div className="skill">
-				<Image
-					alt="Materializecss"
-					src={'/svg/skills/materializecss.svg'}
-					height={40}
-					width={40}
-				/>
+				<METERIAL height={40} width={40} />
 				<span>Materializecss</span>
 			</div>
 
 			<div className="skill">
-				<Image alt="MySQL" src={'/svg/skills/mysql.svg'} height={40} width={40} />
+				<MySQL height={40} width={40} />
 				<span>MySQL</span>
 			</div>
 		</div>
