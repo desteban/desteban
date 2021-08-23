@@ -21,7 +21,7 @@ export default function Home() {
 					<div className="fondo">
 						<div className="imagen">
 							<Image
-								src={'/persona.jpg'}
+								src={'/fondo.jpg'}
 								alt="Imagen de David Cubillos"
 								height={400}
 								width={400}

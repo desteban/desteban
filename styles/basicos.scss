@@ -128,9 +128,13 @@ a {
 	position: relative;
 	padding: 0 5%;
 	height: 100vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
+	display: grid;
+	grid-auto-flow: dense;
+	grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+	grid-template-rows: repeat(1, 1fr);
+	justify-items: center;
+	align-items: center;
+	gap: 8px;
 
 	.imagen {
 		display: flex;
@@ -233,21 +237,9 @@ a {
 	}
 }
 
-@media screen and (min-width: 481px) {
-	.fondo {
-		display: grid;
-		grid-auto-flow: dense;
-		grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
-		grid-template-rows: repeat(1, 1fr);
-		justify-items: center;
-		align-items: center;
-		gap: 8px;
-	}
-}
-
 @media screen and (min-width: 769px) {
 	.contenido {
-		margin: 0px 15%;
+		margin: 0px 12%;
 	}
 
 	.movil-visible {
