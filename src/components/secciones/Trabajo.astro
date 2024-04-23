@@ -12,10 +12,12 @@ const { cargo, empresa, fechaInicial, datetimeFin, datetimeInicio, fechaFin } =
   Astro.props;
 ---
 
-<div class="trabajo grid grid-cols-1 gap-2 md:grid-cols-5 md:space-x-4 pt-10">
+<div
+  class="relative py-5 px-2 trabajo grid grid-cols-1 gap-2 md:grid-cols-5 md:space-x-4 transition-shadow trabajo"
+>
   <div class="titulo-trabajo md:col-span-2">
-    <h3>{cargo}</h3>
-    <h4>{empresa}</h4>
+    <h3 class="capitalize">{cargo}</h3>
+    <h4 class="capitalize">{empresa}</h4>
     <time datetime={datetimeInicio}>{fechaInicial}</time>
     {fechaFin ? "-" : ""}
     {fechaFin ? <time datetime={datetimeFin}>{fechaFin}</time> : ""}
@@ -28,6 +30,21 @@ const { cargo, empresa, fechaInicial, datetimeFin, datetimeInicio, fechaFin } =
 
 <style>
   .trabajo {
+    overflow: hidden;
+  }
+
+  .trabajo::before {
+    position: absolute;
+    bottom: 0px;
+    content: "";
+    width: 0%;
+    height: 1px;
+    background-color: #fefefe;
+    transition: width 0.4s ease-out;
+  }
+
+  .trabajo:hover::before {
+    width: 100%;
   }
 
   .titulo-trabajo {

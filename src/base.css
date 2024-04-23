@@ -30,7 +30,7 @@
     --secondary: 225, 5%, 47%;
     --secondary-foreground: 0 0% 9%;
 
-    --tertiary: #2cb67d;
+    --tertiary: hsl(155, 61%, 44%);
 
     --muted: 0 0% 96.1%;
     --muted-foreground: 0 0% 45.1%;
