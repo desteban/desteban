@@ -1,5 +1,9 @@
 ---
 import Proyecto from "./Proyecto.astro";
+import Enlace from "@components/UI/Enlaces/Enlace.astro";
+import BotonEnlace from "@components/UI/Enlaces/BotonEnlace.astro";
+
+import GitHubIcono from "@iconos/GitHubIcono.astro";
 ---
 
 <div
@@ -15,6 +19,25 @@ import Proyecto from "./Proyecto.astro";
       genera gráficos para que veas de una manera más fácil y puedas tomar una
       decisión.
     </p>
+
+    <div class="flex">
+      <Enlace
+        href="https://luks.vercel.app"
+        texto="Preview"
+        title="Luks"
+        targetBlank
+        classname="mx-2"
+      />
+
+      <BotonEnlace
+        href="https://github.com/desteban/Luks"
+        title="Codigo del proyecto"
+        classname="mx-2"
+        targetBlank
+      >
+        <GitHubIcono /> Codigo
+      </BotonEnlace>
+    </div>
   </Proyecto>
 </div>
 
