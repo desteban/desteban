@@ -4,6 +4,7 @@ import Layout from "../layouts/Layout.astro";
 import Container from "@components/Container.astro";
 import ExperienciaLaboral from "@components/secciones/ExperienciaLaboral.astro";
 import ProyectosPersonales from "@components/secciones/Proyectos/Proyectos.astro";
+import BotonEnlace from "@components/UI/Enlaces/BotonEnlace.astro";
 
 import Corbata from "@iconos/Corbata.astro";
 import ArchivoCodigo from "@iconos/ArchivoCode.astro";
@@ -28,23 +29,21 @@ import GitHubIcono from "@iconos/GitHubIcono.astro";
         </p>
 
         <div class="flex flex-wrap gap-4 mt-8">
-          <a
+          <BotonEnlace
             href="https://www.linkedin.com/in/david-cubillos-7b502b18b/"
-            target="_blank"
-            title="Perfil linkedin"
-            class="no-underline border border-primary px-3 py-1 rounded-full text-sm text-primary inline-flex gap-1"
+            targetBlanck
+            title="Perfil de linkedin"
           >
             <Linkedin /> Linkedin
-          </a>
+          </BotonEnlace>
 
-          <a
-            href="https://github.com/desteban"
-            target="_blank"
-            title="Perfil GitHub"
-            class="no-underline border border-primary px-3 py-1 rounded-full text-sm text-primary inline-flex gap-1"
+          <BotonEnlace
+            href="https://www.linkedin.com/in/david-cubillos-7b502b18b/"
+            targetBlanck
+            title="Perfil de GitHub"
           >
             <GitHubIcono /> GitHub
-          </a>
+          </BotonEnlace>
         </div>
       </Container>
     </section>
@@ -82,13 +81,21 @@ import GitHubIcono from "@iconos/GitHubIcono.astro";
         </p>
 
         <p>
-          Mientras cursaba la carrera de ingeniería de sistemas aprendí
-          conceptos de <b><i>bases de datos</i></b> los cuales me llevaron a participar
-          en varios eventos de programación y en un <b><i>hackathon</i></b> en los
-          cuales aprendí que la programación es una habilidad muy transversal, así
-          mismos <b><i>llevamos internet</i></b> para montar un café internet en
-          una <b><i>zona apartada</i></b>
-          la cual ayudó a muchos niños a encontrar información mucho más rápido.
+          Durante mi trayectoria en la carrera de Ingeniería de Sistemas,
+          adquirí sólidos conocimientos sobre <b><i>bases de datos</i></b>.
+          Estos conocimientos me impulsaron a participar activamente en diversos
+          eventos de programación, incluyendo un hackathon. En estas
+          experiencias, descubrí que la programación es una habilidad
+          extremadamente versátil y poderosa.
+        </p>
+
+        <p>
+          Además, tuve la oportunidad de <b
+            ><i>contribuir a la comunidad llevando internet a una zona remota</i
+            ></b
+          > y estableciendo un café internet. Esta iniciativa no solo benefició a
+          los residentes locales, sino que también brindó a muchos niños acceso rápido
+          a información.
         </p>
       </Container>
     </section>

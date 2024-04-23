@@ -1,0 +1,24 @@
+---
+import Icono from "@iconos/EnlaceIcono.astro";
+import BotonEnlace from "@components/UI/Enlaces/BotonEnlace.astro";
+
+interface Props {
+  estilos?: string;
+  href: string;
+  texto: string;
+  title?: string;
+  targetBlanck?: boolean;
+}
+
+const { href, texto, estilos, title, targetBlanck = false } = Astro.props;
+---
+
+<BotonEnlace
+  href={href}
+  title={title}
+  targetBlanck={targetBlanck}
+  classname={estilos}
+>
+  <Icono size={24} />
+  {texto}
+</BotonEnlace>

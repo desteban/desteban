@@ -1,5 +1,7 @@
 ---
 import Trabajo from "./Trabajo.astro";
+
+import Enlace from "@components/UI/Enlaces/Enlace.astro";
 ---
 
 <div class="px-6">
@@ -19,6 +21,15 @@ import Trabajo from "./Trabajo.astro";
           usuario sea mucho mejor, creé documentos PDF con información de PQRSDF
           y añadí una función de búsqueda para encontrar PQRSF más rápido.
         </p>
+
+        <div>
+          <Enlace
+            href="https://pqrsd.personeriabogota.gov.co/peticionario"
+            title="Proyecto"
+            texto="Ver"
+            targetBlanck
+          />
+        </div>
       </Trabajo>
     </li>
 

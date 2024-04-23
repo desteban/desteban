@@ -12,7 +12,7 @@ const { cargo, empresa, fechaInicial, datetimeFin, datetimeInicio, fechaFin } =
   Astro.props;
 ---
 
-<div class="trabajo grid grid-cols-1 gap-2 md:grid-cols-5 md:space-x-4">
+<div class="trabajo grid grid-cols-1 gap-2 md:grid-cols-5 md:space-x-4 pt-10">
   <div class="titulo-trabajo md:col-span-2">
     <h3>{cargo}</h3>
     <h4>{empresa}</h4>
@@ -28,7 +28,6 @@ const { cargo, empresa, fechaInicial, datetimeFin, datetimeInicio, fechaFin } =
 
 <style>
   .trabajo {
-    padding-bottom: 40px;
   }
 
   .titulo-trabajo {
