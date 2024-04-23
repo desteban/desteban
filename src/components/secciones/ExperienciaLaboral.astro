@@ -1,0 +1,70 @@
+---
+import Trabajo from "./Trabajo.astro";
+---
+
+<div class="px-6">
+  <ul>
+    <li>
+      <Trabajo
+        cargo="Ingeniero"
+        empresa="Personeria De Bogotá"
+        fechaInicial="Noviembre de 2023"
+        datetimeInicio="2023-11"
+        fechaFin="Diciembre de 2023"
+        datetimeFin="2023-12"
+      >
+        <p class="leading-5">
+          Hice que el formulario para registrar PQRSDF fuera más fácil de usar,
+          estandaricé las ventanas emergentes para que la experiencia del
+          usuario sea mucho mejor, creé documentos PDF con información de PQRSDF
+          y añadí una función de búsqueda para encontrar PQRSF más rápido.
+        </p>
+      </Trabajo>
+    </li>
+
+    <li>
+      <Trabajo
+        cargo="Desarrollador web"
+        empresa="Independiente"
+        fechaInicial="Noviembre de 2022"
+        datetimeInicio="2022-11"
+        fechaFin="Noviembre de 2023"
+        datetimeFin="2023-11"
+      >
+        <p>
+          En este periodo trabajé en 2 proyectos, complementar la herramienta
+          que desarrollamos en mi tiempo de practicante, en lo que podemos
+          destacar la creación de dashboard, agregar filtros para obtener
+          resultados específicos de RIPS, lo cual mejoró en un 60% la búsqueda
+          de archivos y en el segundo proyecto realicé el backend de un sistema
+          de encuestas la cual se encargaba de procesar las respuestas y genera
+          una puntuación de riesgo.
+        </p>
+      </Trabajo>
+    </li>
+
+    <li>
+      <Trabajo
+        cargo="Pasante"
+        empresa="Sosalud"
+        fechaInicial="Marzo de 2022"
+        datetimeInicio="2022-03"
+        fechaFin="Octubre de 2022"
+        datetimeFin="2022-10"
+      >
+        <p>
+          Desarrollar un API REST la cual valida archivos RIPS (Registro
+          Individual de Prestación de Servicios de Salud) para optimizar la
+          auditoría de estos, diseñar interfaz de login, diseñar y desarrollar
+          historial de RIPS.
+        </p>
+      </Trabajo>
+    </li>
+  </ul>
+</div>
+
+<style>
+  p {
+    line-height: 1.25rem;
+  }
+</style>

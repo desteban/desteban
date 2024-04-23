@@ -1,0 +1,257 @@
+/* El archivo base.css inyectado por defecto de la integración */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --accent: 136, 58, 234;
+    --accent-light: 224, 204, 250;
+    --accent-dark: 49, 10, 101;
+    --accent-gradient: linear-gradient(
+      45deg,
+      rgb(var(--accent)),
+      rgb(var(--accent-light)) 30%,
+      white 60%
+    );
+
+    --background: 240, 8%, 9%;
+    --foreground: 0 0% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+
+    --primary: 255, 83%, 65%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 225, 5%, 47%;
+    --secondary-foreground: 0 0% 9%;
+
+    --tertiary: #2cb67d;
+
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+
+    --radius: 0.5rem;
+
+    --page-container-padding-x: 1rem;
+    --tamanio-pantalla: 100%;
+    --padding-top-main: 1.55rem;
+    --padding-bottom-main: 1.55rem;
+    --color-fondo: #f1efef;
+    --fondo-body: #efeaea;
+    --tamanio-header: 70px;
+    --color-link: hsl(255, 83%, 65%);
+
+    --color-titulos: 60, 100%, 100%;
+    --color-texto: hsl(214, 16%, 64%);
+    --color-texto-boton: 60, 100%, 100%;
+    --fondo-boton: 255, 83%, 65%;
+  }
+
+  .noto-sans {
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    src: url("/NotoSans-VariableFont_wdth,wght");
+  }
+
+  p,
+  ul,
+  ol {
+    color: var(--color-texto);
+  }
+
+  html {
+    font-family: "Noto Sans", sans-serif;
+    scroll-behavior: smooth;
+    background-color: var(--background);
+  }
+
+  code {
+    font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+      DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+  }
+
+  section {
+    padding-top: 90px;
+  }
+
+  .fondo {
+    background-color: var(--color-fondo);
+  }
+
+  form {
+    padding: 5px;
+  }
+
+  p {
+    max-width: 75ch;
+    line-height: 1.2rem;
+    margin-bottom: 1rem;
+    text-wrap: pretty;
+    color: var(--color-texto);
+    text-wrap: pretty;
+  }
+
+  h1 {
+    line-height: initial;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+    font-size: 2rem;
+    text-wrap: balance;
+    color: hsl(var(--color-titulos));
+    font-family: "Noto Sans", sans-serif;
+  }
+
+  h2 {
+    line-height: initial;
+    margin-bottom: 1.25rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-wrap: balance;
+    color: hsl(var(--color-titulos));
+  }
+
+  h3 {
+    line-height: initial;
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-wrap: balance;
+    color: hsl(var(--color-titulos));
+  }
+
+  h4 {
+    line-height: initial;
+    margin-bottom: 1.25rem;
+    text-wrap: balance;
+    color: hsl(var(--color-titulos));
+  }
+
+  h5 {
+    line-height: initial;
+    margin-bottom: 1.25rem;
+  }
+
+  h6 {
+    line-height: initial;
+    margin-bottom: 1.25rem;
+  }
+
+  a {
+    color: var(--color-link);
+    text-decoration: underline;
+  }
+
+  .is-required:before {
+    content: "*";
+    margin-right: 3px;
+    color: red;
+    font-weight: bold;
+  }
+
+  ul,
+  ol {
+    margin: 0.8em 0;
+  }
+
+  ul {
+    list-style: disc;
+  }
+
+  ol {
+    list-style: decimal;
+  }
+
+  @media screen and (min-width: 650px) {
+    :root {
+      --page-container-padding-x: 1.25rem;
+    }
+  }
+
+  @media screen and (min-width: 960px) {
+    * {
+      font-size: 20px;
+      line-height: 24px;
+    }
+    :root {
+      --page-container-padding-x: 2rem;
+      --tamanio-pantalla: 50.6818rem;
+      --padding-top-main: 2rem;
+      --padding-bottom-main: 3rem;
+    }
+
+    h2 {
+      font-size: 30px;
+    }
+
+    h3 {
+      font-size: 24px;
+    }
+  }
+
+  @media screen and (min-width: 1125px) {
+    :root {
+      --page-container-padding-x: 2.5rem;
+      /* --tamanio-pantalla: 50.6818rem; */
+      --tamanio-pantalla: 60rem;
+      --padding-top-main: 3rem;
+      --padding-bottom-main: 5rem;
+    }
+  }
+
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}

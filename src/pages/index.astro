@@ -1,0 +1,95 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import Container from "@components/Container.astro";
+import ExperienciaLaboral from "@components/secciones/ExperienciaLaboral.astro";
+import ProyectosPersonales from "@components/secciones/Proyectos/Proyectos.astro";
+
+import Corbata from "@iconos/Corbata.astro";
+import ArchivoCodigo from "@iconos/ArchivoCode.astro";
+import PersonaLupa from "@iconos/PersonaLupa.astro";
+import Linkedin from "@iconos/Linkedin.astro";
+import GitHubIcono from "@iconos/GitHubIcono.astro";
+---
+
+<Layout title="Portafolio" description="Esta es la descripcion del sitio">
+  <main>
+    <section id="presentacion">
+      <Container>
+        <!-- imagen -->
+        <h1>Hola, soy David</h1>
+
+        <p>
+          <b>+2 años de experiencia</b>. Ingeniero de sistemas. Experiencia en
+          <b>desarrollo web</b>, tanto frontend como backend.
+        </p>
+
+        <div class="flex flex-wrap gap-4 mt-8">
+          <a
+            href="https://www.linkedin.com/in/david-cubillos-7b502b18b/"
+            target="_blank"
+            title="Perfil linkedin"
+            class="no-underline border border-primary px-3 py-1 rounded-full text-sm text-primary inline-flex gap-1"
+          >
+            <Linkedin /> Linkedin
+          </a>
+
+          <a
+            href="https://github.com/desteban"
+            target="_blank"
+            title="Perfil GitHub"
+            class="no-underline border border-primary px-3 py-1 rounded-full text-sm text-primary inline-flex gap-1"
+          >
+            <GitHubIcono /> GitHub
+          </a>
+        </div>
+      </Container>
+    </section>
+
+    <section class="container" aria-label="experiencia laboral">
+      <h2 class="flex items-center gap-3">
+        <Corbata size={32} />
+        Experiencia laboral
+      </h2>
+
+      <ExperienciaLaboral />
+    </section>
+
+    <section class="container" aria-label="proyectos personales">
+      <h2 class="flex gap-3 items-center">
+        <ArchivoCodigo size={32} />
+        Proyectos personales
+      </h2>
+
+      <ProyectosPersonales />
+    </section>
+
+    <section aria-label="acerca de mi">
+      <Container>
+        <h2 class="flex gap-3 items-center">
+          <PersonaLupa />
+          Acerca de mi
+        </h2>
+
+        <p>
+          Hola, me llamo David Cubillos. Conocí el mundo de la programación
+          cuando encontré un video que me enseñaba a crear una página web y
+          decidí meterme un poco mas en este mundo lo cual me llevó a estudiar
+          ingeniería de sistemas.
+        </p>
+
+        <p>
+          Mientras cursaba la carrera de ingeniería de sistemas aprendí
+          conceptos de <b><i>bases de datos</i></b> los cuales me llevaron a participar
+          en varios eventos de programación y en un <b><i>hackathon</i></b> en los
+          cuales aprendí que la programación es una habilidad muy transversal, así
+          mismos <b><i>llevamos internet</i></b> para montar un café internet en
+          una <b><i>zona apartada</i></b>
+          la cual ayudó a muchos niños a encontrar información mucho más rápido.
+        </p>
+      </Container>
+    </section>
+  </main>
+</Layout>
+
+<style></style>

@@ -1,0 +1,42 @@
+---
+interface Props {
+  alt: string;
+  src: string;
+  Titulo: string;
+  className?: string;
+}
+
+const { Titulo, alt, src, className } = Astro.props;
+---
+
+<article
+  class={`flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0 gap-8 md:gap-10`}
+>
+  <div class="w-full md:w-1/2">
+    <figure
+      class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50 md:min-h-36"
+    >
+      <img
+        src={src}
+        alt={alt}
+        loading="lazy"
+        class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+      />
+    </figure>
+  </div>
+
+  <div class="w-full md:w-1/2 md:max-w-lg limpiar">
+    <h3 class="m-0 text-2xl font-bold">
+      {Titulo}
+    </h3>
+    <div class="flex flex-wrap mt-2">
+      <slot />
+    </div>
+  </div>
+</article>
+
+<style>
+  .limpiar {
+    margin: 0px !important;
+  }
+</style>

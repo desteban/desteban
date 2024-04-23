@@ -1,0 +1,30 @@
+---
+import Proyecto from "./Proyecto.astro";
+---
+
+<div
+  class="flex flex-col gap-9 contenedor md:[&>*:nth-child(odd)]:flex-row-reverse"
+>
+  <Proyecto
+    Titulo="Luks"
+    alt="Pagina de Luks"
+    src="/ImgProyectosPersonales/Luks.webp"
+  >
+    <p>
+      Luks es una aplicación que te permite llevar el control de tus finanzas,
+      genera gráficos para que veas de una manera más fácil y puedas tomar una
+      decisión.
+    </p>
+  </Proyecto>
+</div>
+
+<style>
+  p {
+    line-height: 1.5rem;
+  }
+
+  .contenedor > * {
+    padding: 20px;
+    background-color: red !important;
+  }
+</style>

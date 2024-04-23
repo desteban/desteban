@@ -1,0 +1,46 @@
+---
+interface Props {
+  cargo: string;
+  datetimeFin?: string;
+  datetimeInicio?: string;
+  empresa: string;
+  fechaFin?: string;
+  fechaInicial: string;
+}
+
+const { cargo, empresa, fechaInicial, datetimeFin, datetimeInicio, fechaFin } =
+  Astro.props;
+---
+
+<div class="trabajo grid grid-cols-1 gap-2 md:grid-cols-5 md:space-x-4">
+  <div class="titulo-trabajo md:col-span-2">
+    <h3>{cargo}</h3>
+    <h4>{empresa}</h4>
+    <time datetime={datetimeInicio}>{fechaInicial}</time>
+    {fechaFin ? "-" : ""}
+    {fechaFin ? <time datetime={datetimeFin}>{fechaFin}</time> : ""}
+  </div>
+
+  <div class="md:col-span-3">
+    <slot />
+  </div>
+</div>
+
+<style>
+  .trabajo {
+    padding-bottom: 40px;
+  }
+
+  .titulo-trabajo {
+    margin-bottom: 18px;
+  }
+
+  h3,
+  h4 {
+    margin-bottom: 2px;
+  }
+
+  h3 {
+    color: hsl(var(--fondo-boton));
+  }
+</style>
