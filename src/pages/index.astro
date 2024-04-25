@@ -11,6 +11,7 @@ import ArchivoCodigo from "@iconos/ArchivoCode.astro";
 import PersonaLupa from "@iconos/PersonaLupa.astro";
 import Linkedin from "@iconos/Linkedin.astro";
 import GitHubIcono from "@iconos/GitHubIcono.astro";
+import Foto from "@img/Foto-perfil.webp";
 ---
 
 <Layout
@@ -20,7 +21,14 @@ import GitHubIcono from "@iconos/GitHubIcono.astro";
   <main>
     <section id="presentacion">
       <Container>
-        <!-- imagen -->
+        <figure class="my-4 aspect-square size-16 rounded-full overflow-hidden">
+          <img
+            src={Foto.src}
+            alt="David Cubillos"
+            class="object-cover w-full h-auto scale-110 transition-transform ease-in-out duration-500 hover:scale-125"
+          />
+        </figure>
+
         <h1>Hola, soy David</h1>
 
         <p>
