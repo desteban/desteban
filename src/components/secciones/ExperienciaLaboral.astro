@@ -4,9 +4,9 @@ import Trabajo from "./Trabajo.astro";
 import Enlace from "@components/UI/Enlaces/Enlace.astro";
 ---
 
-<div class="px-6 relative experiencia min-h-56">
+<div class="px-6 relative experiencia">
   <ul class="relative">
-    <li class="trabajo">
+    <li class="">
       <Trabajo
         cargo="Ingeniero"
         empresa="Personeria De Bogotá"
@@ -77,11 +77,15 @@ import Enlace from "@components/UI/Enlaces/Enlace.astro";
 <style>
   .trabajo {
     opacity: 0;
-    transition: opacity 400ms ease-in;
+    transform: scale(0);
+    transition:
+      opacity 400ms ease-in,
+      transform 500ms ease-in-out;
   }
 
   .activado {
     opacity: 1;
+    transform: scale(1);
     transform: scale(1);
   }
 
