@@ -110,6 +110,15 @@
     text-wrap: pretty;
   }
 
+  b,
+  strong {
+    color: hsl(var(--primary));
+  }
+
+  i {
+    color: inherit;
+  }
+
   h1 {
     line-height: initial;
     font-weight: 700;

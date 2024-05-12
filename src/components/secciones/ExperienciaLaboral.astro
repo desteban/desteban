@@ -4,9 +4,9 @@ import Trabajo from "./Trabajo.astro";
 import Enlace from "@components/UI/Enlaces/Enlace.astro";
 ---
 
-<div class="px-6">
-  <ul>
-    <li>
+<div class="px-6 relative experiencia min-h-56">
+  <ul class="relative">
+    <li class="trabajo">
       <Trabajo
         cargo="Ingeniero"
         empresa="Personeria De Bogotá"
@@ -33,7 +33,7 @@ import Enlace from "@components/UI/Enlaces/Enlace.astro";
       </Trabajo>
     </li>
 
-    <li>
+    <li class="trabajo">
       <Trabajo
         cargo="Desarrollador web"
         empresa="Independiente"
@@ -54,7 +54,7 @@ import Enlace from "@components/UI/Enlaces/Enlace.astro";
       </Trabajo>
     </li>
 
-    <li>
+    <li class="trabajo">
       <Trabajo
         cargo="Pasante"
         empresa="Sosalud"
@@ -75,6 +75,16 @@ import Enlace from "@components/UI/Enlaces/Enlace.astro";
 </div>
 
 <style>
+  .trabajo {
+    opacity: 0;
+    transition: opacity 400ms ease-in;
+  }
+
+  .activado {
+    opacity: 1;
+    transform: scale(1);
+  }
+
   p {
     line-height: 1.25rem;
   }
@@ -83,3 +93,31 @@ import Enlace from "@components/UI/Enlaces/Enlace.astro";
     margin-bottom: 2rem;
   }
 </style>
+
+<script>
+  const observador = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entri) => {
+        if (entri.isIntersecting) {
+          entri.target.classList.add("activado");
+          // console.log(entri);
+          //dejar de observar el elemeto
+          observador.unobserve(entri.target);
+        } else {
+          entri.target.classList.remove("activado");
+        }
+      });
+    },
+    {
+      threshold: 0.3,
+      root: document.querySelector("experiencia"),
+    }
+  );
+
+  const trabajos = document.querySelectorAll("li.trabajo");
+
+  //observar elementos
+  trabajos.forEach((trabajo) => {
+    observador.observe(trabajo);
+  });
+</script>
