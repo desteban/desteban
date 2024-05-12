@@ -73,7 +73,8 @@
 
   p,
   ul,
-  ol {
+  ol,
+  * {
     color: var(--color-texto);
   }
 

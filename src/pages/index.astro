@@ -5,6 +5,7 @@ import Container from "@components/Container.astro";
 import ExperienciaLaboral from "@components/secciones/ExperienciaLaboral.astro";
 import ProyectosPersonales from "@components/secciones/Proyectos/Proyectos.astro";
 import BotonEnlace from "@components/UI/Enlaces/BotonEnlace.astro";
+import Header from "@components/Header.astro";
 
 import Corbata from "@iconos/Corbata.astro";
 import ArchivoCodigo from "@iconos/ArchivoCode.astro";
@@ -18,7 +19,9 @@ import Foto from "@img/Foto-perfil.webp";
   title="Portafolio"
   description="Hola, soy David. Desarrollador web con mas de 2 años de experiencia."
 >
-  <main>
+  <main class="relative">
+    <Header />
+
     <section id="presentacion">
       <Container>
         <figure class="my-4 aspect-square size-16 rounded-full overflow-hidden">
@@ -58,7 +61,11 @@ import Foto from "@img/Foto-perfil.webp";
       </Container>
     </section>
 
-    <section class="container" aria-label="experiencia laboral">
+    <section
+      class="container"
+      aria-label="experiencia laboral"
+      id="experiencia"
+    >
       <h2 class="flex items-center gap-3">
         <Corbata size={32} />
         Experiencia laboral
@@ -67,7 +74,7 @@ import Foto from "@img/Foto-perfil.webp";
       <ExperienciaLaboral />
     </section>
 
-    <section class="container" aria-label="proyectos personales">
+    <section id="proyectos" class="container" aria-label="proyectos personales">
       <h2 class="flex gap-3 items-center">
         <ArchivoCodigo size={32} />
         Proyectos personales
@@ -76,7 +83,7 @@ import Foto from "@img/Foto-perfil.webp";
       <ProyectosPersonales />
     </section>
 
-    <section aria-label="acerca de mi">
+    <section id="acerca-de-mi" aria-label="acerca de mi">
       <Container>
         <h2 class="flex gap-3 items-center">
           <PersonaLupa />

@@ -1,0 +1,35 @@
+---
+
+---
+
+<header
+  class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2"
+>
+  <nav
+    class="rounded-3xl px-4 py-2 flex space-x-3 font-medium bg-opacity-80 transition-[background-color] duration-300 backdrop-blur-sm"
+  >
+    <a href="/#experiencia" title="Mi experiencia">Experiencia</a>
+    <a href="/#proyectos" title="Mis proyectos">Proyectos</a>
+    <a href="/#acerca-de-mi" title="Acerca de mi">Acerca de mi</a>
+  </nav>
+</header>
+
+<style>
+  a {
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+</style>
+
+<script>
+  window.addEventListener("scroll", function () {
+    const nav = document.querySelector("nav");
+    const scrollY = window.scrollY;
+
+    if (scrollY > 10) {
+      nav?.classList.add("bg-[#242629]");
+    } else {
+      nav?.classList.remove("bg-[#242629]");
+    }
+  });
+</script>
