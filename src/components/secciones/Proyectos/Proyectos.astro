@@ -4,6 +4,10 @@ import Enlace from "@components/UI/Enlaces/Enlace.astro";
 import BotonEnlace from "@components/UI/Enlaces/BotonEnlace.astro";
 
 import GitHubIcono from "@iconos/GitHubIcono.astro";
+import CihipNext from "@components/UI/Chips/CihipNext.astro";
+import ChipTailwind from "@components/UI/Chips/ChipTailwind.astro";
+import ChipPrisma from "@components/UI/Chips/ChipPrisma.astro";
+import ChipPostgres from "@components/UI/Chips/chipPostgres.astro";
 ---
 
 <div
@@ -14,6 +18,16 @@ import GitHubIcono from "@iconos/GitHubIcono.astro";
     alt="Pagina de Luks"
     src="/ImgProyectosPersonales/Luks.webp"
   >
+    <div class="flex gap-2 mb-5 flex-wrap">
+      <CihipNext />
+
+      <ChipTailwind />
+
+      <ChipPrisma />
+
+      <ChipPostgres />
+    </div>
+
     <p>
       Luks es una aplicación que te permite llevar el control de tus finanzas,
       genera gráficos para que veas de una manera más fácil y puedas tomar una

@@ -6,7 +6,8 @@
       "@components/*": ["./src/components/*"],
       "@layouts/*": ["./src/layouts/*"],
       "@iconos/*": ["./public/Icons/*"],
-      "@img/*": ["./public/img/*"]
+      "@img/*": ["./public/img/*"],
+      "@iconosFrame/*": ["./public/frameworks/*"]
     }
   }
 }
