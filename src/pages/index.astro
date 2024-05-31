@@ -23,7 +23,7 @@ import Correo from "@iconos/Correo.astro";
   <main class="relative">
     <Header />
 
-    <section id="presentacion">
+    <section id="presentacion" class="py-7 mt-6 md:mt-0">
       <Container>
         <figure class="my-4 aspect-square size-16 rounded-full overflow-hidden">
           <img
@@ -70,61 +70,63 @@ import Correo from "@iconos/Correo.astro";
       </Container>
     </section>
 
-    <section
-      class="container"
-      aria-label="experiencia laboral"
-      id="experiencia"
-    >
-      <h2 class="flex items-center gap-3">
-        <Corbata size={32} />
-        Experiencia laboral
-      </h2>
-
-      <ExperienciaLaboral />
-    </section>
-
-    <section id="proyectos" class="container" aria-label="proyectos personales">
-      <h2 class="flex gap-3 items-center">
-        <ArchivoCodigo size={32} />
-        Proyectos personales
-      </h2>
-
-      <ProyectosPersonales />
-    </section>
-
-    <section id="acerca-de-mi" aria-label="acerca de mi">
+    <section class="" aria-label="experiencia laboral" id="experiencia">
       <Container>
-        <div class="px-4">
+        <h2 class="flex items-center gap-3">
+          <Corbata size={32} />
+          Experiencia laboral
+        </h2>
+
+        <ExperienciaLaboral />
+      </Container>
+    </section>
+
+    <section class="seccion" id="proyectos" aria-label="proyectos personales">
+      <Container>
+        <h2 class="flex gap-3 items-center">
+          <ArchivoCodigo size={32} />
+          Proyectos personales
+        </h2>
+
+        <ProyectosPersonales />
+      </Container>
+    </section>
+
+    <section class="" id="acerca-de-mi" aria-label="acerca de mi">
+      <Container>
+        <div class="px-1">
           <h2 class="flex gap-3 items-center">
             <PersonaLupa />
             Acerca de mi
           </h2>
 
-          <p>
-            Hola, me llamo David Cubillos. Conocí el mundo de la programación
-            cuando encontré un video que me enseñaba a crear una página web y
-            decidí meterme un poco mas en este mundo lo cual me llevó a estudiar
-            ingeniería de sistemas.
-          </p>
+          <div class="px-4">
+            <p>
+              Hola, me llamo David Cubillos. Conocí el mundo de la programación
+              cuando encontré un video que me enseñaba a crear una página web y
+              decidí meterme un poco mas en este mundo lo cual me llevó a
+              estudiar ingeniería de sistemas.
+            </p>
 
-          <p>
-            Durante mi trayectoria en la carrera de Ingeniería de Sistemas,
-            adquirí sólidos conocimientos sobre <b><i>bases de datos</i></b>.
-            Estos conocimientos me impulsaron a participar activamente en
-            diversos eventos de programación, incluyendo un hackathon. En estas
-            experiencias, descubrí que la programación es una habilidad
-            extremadamente versátil y poderosa.
-          </p>
+            <p>
+              Durante mi trayectoria en la carrera de Ingeniería de Sistemas,
+              adquirí sólidos conocimientos sobre <b><i>bases de datos</i></b>.
+              Estos conocimientos me impulsaron a participar activamente en
+              diversos eventos de programación, incluyendo un hackathon. En
+              estas experiencias, descubrí que la programación es una habilidad
+              extremadamente versátil y poderosa.
+            </p>
 
-          <p>
-            Además, tuve la oportunidad de <b
-              ><i
-                >contribuir a la comunidad llevando internet a una zona remota</i
-              ></b
-            > y estableciendo un café internet. Esta iniciativa no solo benefició
-            a los residentes locales, sino que también brindó a muchos niños acceso
-            rápido a información.
-          </p>
+            <p>
+              Además, tuve la oportunidad de <b
+                ><i
+                  >contribuir a la comunidad llevando internet a una zona remota</i
+                ></b
+              > y estableciendo un café internet. Esta iniciativa no solo benefició
+              a los residentes locales, sino que también brindó a muchos niños acceso
+              rápido a información.
+            </p>
+          </div>
         </div>
       </Container>
     </section>

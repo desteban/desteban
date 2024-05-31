@@ -60,6 +60,8 @@
     --color-texto: hsl(214, 16%, 64%);
     --color-texto-boton: 60, 100%, 100%;
     --fondo-boton: 255, 83%, 65%;
+
+    --fondo-seccion: hsl(216, 6%, 15%);
   }
 
   .noto-sans {
@@ -90,7 +92,12 @@
   }
 
   section {
-    padding-top: 90px;
+    /* padding-top: 45px;
+    padding-bottom: 45px; */
+  }
+
+  .seccion {
+    background-color: var(--fondo-seccion);
   }
 
   .fondo {
@@ -222,7 +229,7 @@
       /* --tamanio-pantalla: 50.6818rem; */
       --tamanio-pantalla: 60rem;
       --padding-top-main: 3rem;
-      --padding-bottom-main: 5rem;
+      /* --padding-bottom-main: 5rem; */
     }
   }
 
