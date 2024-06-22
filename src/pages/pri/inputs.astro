@@ -1,0 +1,154 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/Container.astro";
+import BasicInput from "@components/UI/Input/BasicInput.astro";
+---
+
+<Layout title="Input">
+  <main>
+    <Container>
+      <section id="">
+        <h1>Formulario de prueba</h1>
+
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam
+          dicta, quo, nulla cumque assumenda ut officia quae quod enim
+          repellendus nemo, est mollitia recusandae. Odio dolorem quasi saepe
+          eos voluptas. Totam placeat veritatis voluptas ad odio dolorem nam
+          sunt minus tempore iusto fugiat, vitae harum maiores dolore dicta
+          recusandae quae explicabo, porro inventore dolor deleniti nobis!
+          Commodi pariatur repellat impedit!
+        </p>
+
+        <form
+          id="codigos"
+          aria-label="Formulario para agregar codigos"
+          class="mt-20 px-4 py-8 rounded-md bg-slate-800"
+        >
+          <div>
+            <BasicInput
+              id="cod-1"
+              label="Codigo"
+              placeholder="Codigo"
+              type="number"
+            />
+
+            <BasicInput
+              id="cod-2"
+              label="Codigo"
+              placeholder="Codigo"
+              type="number"
+            />
+
+            <BasicInput
+              id="cod-3"
+              label="Codigo"
+              placeholder="Codigo"
+              type="number"
+            />
+
+            <BasicInput
+              id="cod-4"
+              label="Codigo"
+              placeholder="Codigo"
+              type="number"
+            />
+
+            <BasicInput
+              id="cod-5"
+              label="Codigo"
+              placeholder="Codigo"
+              type="number"
+            />
+
+            <BasicInput
+              id="cod-6"
+              label="Codigo"
+              placeholder="Codigo"
+              type="number"
+            />
+
+            <BasicInput
+              id="cod-7"
+              label="Codigo"
+              placeholder="Codigo"
+              type="number"
+            />
+
+            <BasicInput
+              id="cod-8"
+              label="Codigo"
+              placeholder="Codigo"
+              type="number"
+            />
+
+            <BasicInput
+              id="cod-9"
+              label="Codigo"
+              placeholder="Codigo"
+              type="number"
+            />
+
+            <BasicInput
+              id="cod-10"
+              label="Codigo"
+              placeholder="Codigo"
+              type="number"
+            />
+
+            <BasicInput
+              id="cod-11"
+              label="Codigo"
+              placeholder="Codigo"
+              type="number"
+            />
+
+            <BasicInput
+              id="cod-12"
+              label="Codigo"
+              placeholder="Codigo"
+              type="number"
+            />
+
+            <BasicInput
+              id="cod-13"
+              label="Codigo"
+              placeholder="Codigo"
+              type="number"
+            />
+
+            <BasicInput
+              id="cod-14"
+              label="Codigo"
+              placeholder="Codigo"
+              type="number"
+            />
+
+            <BasicInput
+              id="cod-15"
+              label="Codigo"
+              placeholder="Codigo"
+              type="number"
+            />
+          </div>
+
+          <div class="max-w-max mx-auto mt-5">
+            <input
+              id="send"
+              class="px-2 py-1 rounded-lg border border-primary text-[var(--tertiary)] hover:bg-opacity-10 cursor-pointer"
+              type="button"
+              value="Guardar"
+            />
+          </div>
+        </form>
+      </section>
+    </Container>
+  </main>
+</Layout>
+
+<script>
+  document.querySelector("input#send").addEventListener("click", () => {
+    alert("codigos agregados con exito");
+    location.reload();
+  });
+</script>

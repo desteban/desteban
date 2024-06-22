@@ -1,5 +1,5 @@
 {
-  "extends": "astro/tsconfigs/strict",
+  "extends": "astro/tsconfigs/base",
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
@@ -7,7 +7,13 @@
       "@layouts/*": ["./src/layouts/*"],
       "@iconos/*": ["./public/Icons/*"],
       "@img/*": ["./public/img/*"],
-      "@iconosFrame/*": ["./public/frameworks/*"]
-    }
+      "@iconosFrame/*": ["./public/frameworks/*"],
+      "@globals/*": ["./src/Globals/*"]
+    },
+    "plugins": [
+      {
+        "name": "@astrojs/ts-plugin"
+      }
+    ]
   }
 }

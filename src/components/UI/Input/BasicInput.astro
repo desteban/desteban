@@ -1,0 +1,17 @@
+---
+import { TypesInput, type TypeInput } from "@globals/TypeInput";
+
+interface Props {
+  id: string;
+  placeholder?: string;
+  label?: string;
+  type?: TypeInput;
+}
+
+const { id, label, placeholder, type = TypesInput.Text } = Astro.props;
+---
+
+<label class="mb-5 inline-block">
+  {label}
+  <input type={type} placeholder={placeholder} class="px-2 py-1 rounded-md" />
+</label>
