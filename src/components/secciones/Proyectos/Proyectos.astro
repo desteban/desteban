@@ -8,11 +8,10 @@ import CihipNext from "@components/UI/Chips/CihipNext.astro";
 import ChipTailwind from "@components/UI/Chips/ChipTailwind.astro";
 import ChipPrisma from "@components/UI/Chips/ChipPrisma.astro";
 import ChipPostgres from "@components/UI/Chips/chipPostgres.astro";
+import ChipAstro from "@components/UI/Chips/ChipAstro.astro";
 ---
 
-<div
-  class="flex flex-col gap-9 contenedor md:[&>*:nth-child(odd)]:flex-row-reverse"
->
+<div class="flex flex-col gap-7 md:[&>*:nth-child(odd)]:flex-row-reverse">
   <Proyecto
     Titulo="Luks"
     alt="Pagina de Luks"
@@ -53,15 +52,36 @@ import ChipPostgres from "@components/UI/Chips/chipPostgres.astro";
       </BotonEnlace>
     </div>
   </Proyecto>
+
+  <Proyecto
+    Titulo="Clon de Medium"
+    alt="Mi clon de la pagina de Medium"
+    src="ImgProyectosPersonales/Medium-Clone.png"
+  >
+    <div class="flex gap-2 mb-5 flex-wrap">
+      <ChipAstro />
+      <ChipTailwind />
+    </div>
+
+    <p>
+      Clon de la pagina de Medium, con la tecnología Astro y Tailwind CSS.
+    </p>
+
+    <div class="flex">
+      <BotonEnlace
+        href="https://github.com/desteban/medium-clone"
+        title="Codigo del proyecto"
+        classname="mx-2 font-semibold text-[var(--tertiary)]"
+        targetBlank
+      >
+        <GitHubIcono /> Codigo
+      </BotonEnlace>
+    </div>
+  </Proyecto>
 </div>
 
 <style>
   p {
     line-height: 1.5rem;
-  }
-
-  .contenedor > * {
-    padding: 20px;
-    background-color: red !important;
   }
 </style>
