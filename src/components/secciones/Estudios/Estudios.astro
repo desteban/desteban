@@ -1,0 +1,37 @@
+---
+import Sombrero from "@iconos/Sombrero.astro";
+import Container from "@components/Container.astro";
+import Curso from "./Curso.astro";
+---
+
+<section id="estudios" class="seccion">
+  <Container>
+    <h2 class="flex items-center gap-3">
+      <Sombrero />
+      Estudios
+    </h2>
+
+    <article id="estudios reglados" class="mt-4">
+      <h3>Estudios reglados</h3>
+
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+        dicta fugit quae! Pariatur, nesciunt quasi aperiam quae doloremque et
+        architecto totam repellat voluptas molestias ipsam eaque eos in, dolorum
+        nostrum.
+      </p>
+    </article>
+
+    <div id="cursos-y-certificaciones" class="mt-12">
+      <h3>Cursos y certificaciones</h3>
+      <div class="flex justify-center flex-wrap">
+        <Curso
+          alt="Logo Platzi"
+          src="/img/Platzi.svg"
+          titulo="Curso de Introducción a PHP"
+          href="https://platzi.com/@desteban/curso/1338-course/diploma/detalle/"
+        />
+      </div>
+    </div>
+  </Container>
+</section>
