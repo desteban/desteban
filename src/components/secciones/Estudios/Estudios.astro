@@ -2,6 +2,86 @@
 import Sombrero from "@iconos/Sombrero.astro";
 import Container from "@components/Container.astro";
 import Curso from "./Curso.astro";
+
+const cursos: Array<CursoD> = [
+  {
+    alt: "Logo Platzi",
+    src: "/img/Platzi.svg",
+    titulo: "Curso de Introducción a PHP",
+    href: "https://platzi.com/@desteban/curso/1338-course/diploma/detalle/",
+    fechaExpedicion: new Date(2019, 1),
+  },
+  {
+    alt: "Logo Platzi",
+    src: "/img/Platzi.svg",
+    titulo: "Curso Básico de Programación Orientada a Objetos con JavaScript",
+    href: "https://platzi.com/p/desteban/curso/2332-javascript-poo/diploma/detalle/",
+    fechaExpedicion: new Date(2022, 1),
+  },
+  {
+    alt: "Logo Platzi",
+    src: "/img/Platzi.svg",
+    titulo: "Curso de Next.js",
+    href: "https://platzi.com/p/desteban/curso/1991-next/diploma/detalle/",
+    fechaExpedicion: new Date(2023, 2),
+  },
+  {
+    alt: "Logo Platzi",
+    src: "/img/Platzi.svg",
+    titulo: "Curso de Backend con NestJS",
+    href: "https://platzi.com/p/desteban/curso/2272-nestjs/diploma/detalle/",
+    fechaExpedicion: new Date(2023, 9),
+  },
+  {
+    alt: "Logo Platzi",
+    src: "/img/Platzi.svg",
+    titulo: "Curso de API REST con Laravel",
+    href: "https://platzi.com/p/desteban/curso/2185-laravel-api/diploma/detalle/",
+    fechaExpedicion: new Date(2024, 0),
+  },
+  {
+    alt: "Logo Platzi",
+    src: "/img/Platzi.svg",
+    titulo: "Curso Profesional de Git y GitHub",
+    href: "https://platzi.com/p/desteban/curso/1557-git-github/diploma/detalle/",
+    fechaExpedicion: new Date(2024, 0),
+  },
+  {
+    alt: "Logo Platzi",
+    src: "/img/Platzi.svg",
+    titulo: "Curso de Programación Orientada a Objetos con C#",
+    href: "https://platzi.com/p/desteban/curso/8036-course/diploma/detalle/",
+    fechaExpedicion: new Date(2024, 3),
+  },
+  {
+    alt: "Logo Platzi",
+    src: "/img/Platzi.svg",
+    titulo: "Curso de Principios SOLID en C# y .NET",
+    href: "https://platzi.com/p/desteban/curso/4761-solid-csharp-net/diploma/detalle/",
+    fechaExpedicion: new Date(2024, 3),
+  },
+  {
+    alt: "Logo Platzi",
+    src: "/img/Platzi.svg",
+    titulo: "Curso de Buenas Prácticas y Código Limpio en C#",
+    href: "https://platzi.com/p/desteban/curso/4788-clean-code-csharp/diploma/detalle/",
+    fechaExpedicion: new Date(2024, 3),
+  },
+  {
+    alt: "Logo Platzi",
+    src: "/img/Platzi.svg",
+    titulo: "Curso de Manejo de Datos en C# con LINQ",
+    href: "https://platzi.com/p/desteban/curso/4263-linq/diploma/detalle/",
+    fechaExpedicion: new Date(2024, 4),
+  },
+  {
+    alt: "Logo Platzi",
+    src: "/img/Platzi.svg",
+    titulo: "Curso de Frontend Developer",
+    href: "https://platzi.com/p/desteban/curso/2467-frontend-developer/diploma/detalle/",
+    fechaExpedicion: new Date(2024, 7),
+  },
+];
 ---
 
 <section id="estudios" class="seccion">
@@ -14,23 +94,36 @@ import Curso from "./Curso.astro";
     <article id="estudios reglados" class="mt-4">
       <h3>Estudios reglados</h3>
 
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus
-        dicta fugit quae! Pariatur, nesciunt quasi aperiam quae doloremque et
-        architecto totam repellat voluptas molestias ipsam eaque eos in, dolorum
-        nostrum.
-      </p>
+      <div class="flex items-center justify-center">
+        <div
+          class="text-center bg-[hsl(var(--background))] rounded-lg md:p-5 px-2 py-4 pb-6"
+        >
+          <figure class="flex items-center justify-center">
+            <img
+              src="/img/UDEC.webp"
+              alt="Logo de la Universidad de Cundinamarca"
+              class="w-16"
+            />
+          </figure>
+          <p class="mt-3 text-[hsl(var(--color-titulos))] font-bold">
+            Universidad de Cundinamarca <br /> Ingeniería de Sistemas
+          </p>
+          <p class="text-sm m-0">
+            {
+              new Date(2023, 2).toLocaleString(undefined, {
+                month: "long",
+                year: "numeric",
+              })
+            }
+          </p>
+        </div>
+      </div>
     </article>
 
     <div id="cursos-y-certificaciones" class="mt-12">
       <h3>Cursos y certificaciones</h3>
-      <div class="flex justify-center flex-wrap">
-        <Curso
-          alt="Logo Platzi"
-          src="/img/Platzi.svg"
-          titulo="Curso de Introducción a PHP"
-          href="https://platzi.com/@desteban/curso/1338-course/diploma/detalle/"
-        />
+      <div class="grid gap-3 grid-cols-2 md:grid-cols-4">
+        {cursos.map((curso) => <Curso {...curso} />)}
       </div>
     </div>
   </Container>

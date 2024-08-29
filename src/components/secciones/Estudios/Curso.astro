@@ -1,23 +1,17 @@
 ---
 import EnlaceIcono from "@iconos/EnlaceIcono.astro";
 
-interface Props {
-  src: string;
-  alt: string;
-  titulo: string;
-  href?: string;
-}
-
-const { alt, src, titulo, href } = Astro.props;
+interface Props extends CursoD {}
+const { alt, src, titulo, href, fechaExpedicion } = Astro.props;
 ---
 
 <a
-  class="rounded-lg md:p-5 md:space-x-2 relative contenedor group px-2 py-4 pb-6 max-w-80"
+  class="rounded-lg md:p-5 md:space-x-2 relative contenedor group px-2 py-4 pb-6"
   target={href !== "#" ? "_blank" : ""}
   href={href}
   title={`Certificado: ${titulo}`}
 >
-  <div class="absolute top-2 left-3 hidden group-hover:block">
+  <div class="absolute top-2 left-3 md:hidden md:group-hover:block">
     <EnlaceIcono />
   </div>
 
@@ -25,9 +19,19 @@ const { alt, src, titulo, href } = Astro.props;
     <img src={src} alt={alt} loading="lazy" class="object-cover m-0" />
   </figure>
 
-  <p class="titulo">
+  <p class="titulo text-sm">
     {titulo}
   </p>
+  {
+    fechaExpedicion ? (
+      <p class="text-xs">
+        {fechaExpedicion.toLocaleString(undefined, {
+          month: "long",
+          year: "numeric",
+        })}
+      </p>
+    ) : null
+  }
 </a>
 
 <style>
