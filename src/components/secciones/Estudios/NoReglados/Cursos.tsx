@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Curso from "./Curso";
 
 const cursos: Array<CursoD> = [
   {
@@ -90,18 +91,25 @@ export default function Cursos() {
   return (
     <div>
       <form>
-        <input
-          type="text"
-          id="cursoBuscar"
-          name="cursoBuscar"
-          value={cursoBuscar}
-          onChange={(e) => setCursoBuscar(e.currentTarget.value)}
-          autoComplete="off"
-        />
+        <label className="flex flex-col">
+          Buscar Cursos
+          <input
+            className="rounded-lg px-2 py-1"
+            type="text"
+            id="cursoBuscar"
+            name="cursoBuscar"
+            value={cursoBuscar}
+            onChange={(e) => setCursoBuscar(e.currentTarget.value)}
+            autoComplete="off"
+          />
+        </label>
       </form>
-      <pre>
-        <code>{JSON.stringify(listaCursos, null, 2)}</code>
-      </pre>
+
+      <div className="min-h-64 grid gap-3 grid-cols-2 md:grid-cols-4 mt-3">
+        {listaCursos.map((curso, index) => (
+          <Curso key={index + curso.titulo} {...curso} />
+        ))}
+      </div>
     </div>
   );
 }
