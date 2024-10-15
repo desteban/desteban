@@ -1,8 +1,4 @@
----
-import Sombrero from "@iconos/Sombrero.astro";
-import Container from "@components/Container.astro";
-import Curso from "./Curso.astro";
-import Cursos from "./Cursos";
+import React, { useState } from "react";
 
 const cursos: Array<CursoD> = [
   {
@@ -83,51 +79,29 @@ const cursos: Array<CursoD> = [
     fechaExpedicion: new Date(2024, 7),
   },
 ];
----
 
-<section id="estudios" class="seccion">
-  <Container>
-    <h2 class="flex items-center gap-3">
-      <Sombrero />
-      Estudios
-    </h2>
+export default function Cursos() {
+  const [cursoBuscar, setCursoBuscar] = useState<string>("");
 
-    <article id="estudios reglados" class="mt-4">
-      <h3>Estudios reglados</h3>
+  let listaCursos = cursos.filter((curso) =>
+    curso.titulo.toUpperCase().includes(cursoBuscar.toUpperCase())
+  );
 
-      <div class="flex items-center justify-center">
-        <div
-          class="text-center bg-[hsl(var(--background))] rounded-lg md:p-5 px-2 py-4 pb-6"
-        >
-          <figure class="flex items-center justify-center">
-            <img
-              src="/img/UDEC.webp"
-              alt="Logo de la Universidad de Cundinamarca"
-              class="w-16"
-            />
-          </figure>
-          <p class="mt-3 text-[hsl(var(--color-titulos))] font-bold">
-            Universidad de Cundinamarca <br /> Ingeniería de Sistemas
-          </p>
-          <p class="text-sm m-0">
-            {
-              new Date(2023, 2).toLocaleString(undefined, {
-                month: "long",
-                year: "numeric",
-              })
-            }
-          </p>
-        </div>
-      </div>
-    </article>
-
-    <div id="cursos-y-certificaciones" class="mt-12">
-      <h3>Cursos y certificaciones</h3>
-      <div class="grid gap-3 grid-cols-2 md:grid-cols-4">
-        {cursos.map((curso) => <Curso {...curso} />)}
-      </div>
-
-      <Cursos client:idle />
+  return (
+    <div>
+      <form>
+        <input
+          type="text"
+          id="cursoBuscar"
+          name="cursoBuscar"
+          value={cursoBuscar}
+          onChange={(e) => setCursoBuscar(e.currentTarget.value)}
+          autoComplete="off"
+        />
+      </form>
+      <pre>
+        <code>{JSON.stringify(listaCursos, null, 2)}</code>
+      </pre>
     </div>
-  </Container>
-</section>
+  );
+}
