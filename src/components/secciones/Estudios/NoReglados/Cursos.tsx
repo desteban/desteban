@@ -7,9 +7,9 @@ export default function Cursos() {
 
   let listaCursos = cursos.filter(
     (curso) =>
-      curso.titulo.toUpperCase().includes(cursoBuscar.toUpperCase()) ||
+      curso.titulo.toUpperCase().includes(cursoBuscar.trim().toUpperCase()) ||
       curso.etiquetas.some((etiqueta) =>
-        etiqueta.toUpperCase().includes(cursoBuscar.toUpperCase())
+        etiqueta.toUpperCase().includes(cursoBuscar.trim().toUpperCase())
       )
   );
 
