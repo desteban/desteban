@@ -12,6 +12,7 @@ export default {
     },
     extend: {
       colors: {
+        tertiary: "var(--tertiary)",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

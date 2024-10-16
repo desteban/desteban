@@ -91,10 +91,10 @@ export default function Cursos() {
   return (
     <div>
       <form>
-        <label className="flex flex-col">
+        <label className="flex flex-col font-semibold">
           Buscar Cursos
           <input
-            className="rounded-lg px-2 py-1"
+            className="rounded-lg px-2 py-1 bg-[hsl(var(--background))] text-white"
             type="text"
             id="cursoBuscar"
             name="cursoBuscar"
