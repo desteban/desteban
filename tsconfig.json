@@ -9,7 +9,8 @@
       "@iconos/*": ["./public/Icons/*"],
       "@img/*": ["./public/img/*"],
       "@iconosFrame/*": ["./public/frameworks/*"],
-      "@globals/*": ["./src/Globals/*"]
+      "@globals/*": ["./src/Globals/*"],
+      "@constants/*": ["./src/constants/*"]
     },
     "plugins": [
       {

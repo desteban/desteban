@@ -1,3 +1,4 @@
+import type { CursoD } from "@constants/cursos";
 import React from "react";
 
 function EnlaceIcono({ size }: { size?: number }) {
@@ -31,7 +32,7 @@ export default function Curso({
 }: CursoD) {
   return (
     <a
-      className="rounded-lg md:p-5 md:space-x-2 group px-2 py-4 pb-6 flex flex-col items-center overflow-hidden bg-[hsl(var(--background))] no-underline cursor-pointer text-center relative"
+      className="rounded-lg md:p-5 md:space-x-2 group px-2 py-4 pb-6 flex flex-col items-center justify-center overflow-hidden bg-[hsl(var(--background))] no-underline cursor-pointer text-center relative"
       target={href !== "#" ? "_blank" : ""}
       href={href}
       title={titulo}
