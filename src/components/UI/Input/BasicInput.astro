@@ -13,5 +13,10 @@ const { id, label, placeholder, type = TypesInput.Text } = Astro.props;
 
 <label class="mb-5 inline-block">
   {label}
-  <input type={type} placeholder={placeholder} class="px-2 py-1 rounded-md" />
+  <input
+    id={id}
+    type={type}
+    placeholder={placeholder}
+    class="px-2 py-1 rounded-md"
+  />
 </label>
