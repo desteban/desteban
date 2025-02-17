@@ -21,16 +21,26 @@ export enum etiquetas {
   "git" = "Git",
   "solid" = "solid",
   "dotnet" = ".NET",
+  "angular" = "Angular",
+  "tailwind" = "Tailwind CSS",
 }
 
 export const cursos: CursoD[] = [
+  {
+    alt: "Logo de Platzi",
+    src: "/img/Platzi.svg",
+    titulo: "Curso de Angular 17: Creación de Aplicaciones Web",
+    href: "https://platzi.com/p/desteban/curso/8352-angular/diploma/detalle/",
+    fechaExpedicion: new Date(2025, 0),
+    etiquetas: [etiquetas.angular, etiquetas.typescript, etiquetas.tailwind],
+  },
   {
     alt: "Logo Platzi",
     src: "/img/Platzi.svg",
     titulo: "Curso de React.js",
     href: "https://platzi.com/p/desteban/curso/7395-react/diploma/detalle/",
     fechaExpedicion: new Date(2024, 8),
-    etiquetas: [etiquetas.react, etiquetas.js],
+    etiquetas: [etiquetas.react, etiquetas.js, etiquetas.tailwind],
   },
   {
     alt: "Logo Platzi",

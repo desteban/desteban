@@ -181,6 +181,10 @@
     text-decoration: underline;
   }
 
+  a:hover {
+    text-decoration: underline;
+  }
+
   .is-required:before {
     content: "*";
     margin-right: 3px;
