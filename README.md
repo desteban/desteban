@@ -6,6 +6,6 @@ Me gustan las tecnologías web puesto que con estas se puede llegar a muchas per
 
 ## Social 📫
 
-- [Twitter](https://twitter.com/dacubillos)
 - [GitHub](https://github.com/desteban)
 - [Linkedin](https://www.linkedin.com/in/david-cubillos-7b502b18b/)
+- [Portafolio](https://desteban.tech)
