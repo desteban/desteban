@@ -16,6 +16,7 @@ import GitHubIcono from "@iconos/GitHubIcono.astro";
 import Foto from "@img/Foto-perfil.webp";
 import Estudios from "@components/secciones/Estudios/Estudios.astro";
 import Copy from "@iconos/Copy.astro";
+import Correo from "dist/Icons/Correo.astro";
 ---
 
 <Layout
@@ -27,7 +28,7 @@ import Copy from "@iconos/Copy.astro";
 
     <section id="presentacion" class="py-7 mt-6 md:mt-0">
       <Container>
-        <figure class="my-4 aspect-square size-28 rounded-full overflow-hidden">
+        <!-- <figure class="my-4 aspect-square size-28 rounded-full overflow-hidden">
           <img
             src={Foto.src}
             alt="David Cubillos"
@@ -35,7 +36,7 @@ import Copy from "@iconos/Copy.astro";
           />
         </figure>
 
-        <h1>Hola, soy David</h1>
+        <h1>Hola, soy David</h1> -->
 
         <p>
           <b>+2 años de experiencia</b>. Ingeniero de sistemas. Experiencia en
@@ -61,13 +62,16 @@ import Copy from "@iconos/Copy.astro";
             <GitHubIcono /> GitHub
           </BotonEnlace>
 
+          <!-- px-2 pl-3 py-1 text-[var(--tertiary)] no-underline transition ease-in duration-300 hover:backdrop-blur-md hover:bg-slate-50 hover:bg-opacity-10 hover:border-secondary cursor-pointer flex gap-2 -->
+
           <div
-            class={`rounded-full text-sm text-[var(--tertiary)] border border-primary flex items-center overflow-hidden`}
+            class={`rounded-full text-sm border border-primary flex items-center overflow-hidden`}
           >
             <a
               href="mailto:soy-esteban@outlook.com"
-              class="px-2 pl-3 py-1 text-[var(--tertiary)] no-underline transition ease-in duration-300 hover:backdrop-blur-md hover:bg-slate-50 hover:bg-opacity-10 hover:border-secondary cursor-pointer"
+              class="text-tertiary pl-3 pr-2 py-1 no-underline flex items-center gap-2"
             >
+              <Correo />
               soy-esteban@outlook.com
             </a>
 
