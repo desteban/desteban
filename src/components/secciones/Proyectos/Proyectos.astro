@@ -9,6 +9,7 @@ import ChipTailwind from "@components/UI/Chips/ChipTailwind.astro";
 import ChipPrisma from "@components/UI/Chips/ChipPrisma.astro";
 import ChipPostgres from "@components/UI/Chips/chipPostgres.astro";
 import ChipAstro from "@components/UI/Chips/ChipAstro.astro";
+import ChipAngular from "@components/UI/Chips/ChipAngular.astro";
 ---
 
 <div class="flex flex-col gap-7 md:[&>*:nth-child(odd)]:flex-row-reverse">
@@ -63,13 +64,38 @@ import ChipAstro from "@components/UI/Chips/ChipAstro.astro";
       <ChipTailwind />
     </div>
 
-    <p>
-      Clon de la pagina de Medium, con la tecnología Astro y Tailwind CSS.
-    </p>
+    <p>Clon de la pagina de Medium, con la tecnología Astro y Tailwind CSS.</p>
 
     <div class="flex">
       <BotonEnlace
         href="https://github.com/desteban/medium-clone"
+        title="Codigo del proyecto"
+        classname="mx-2 font-semibold text-[var(--tertiary)]"
+        targetBlank
+      >
+        <GitHubIcono /> Codigo
+      </BotonEnlace>
+    </div>
+  </Proyecto>
+
+  <Proyecto
+    Titulo="e-Store"
+    alt="Home del proyecto e-Store, se puede ver un listado de productos y filtrar por categorías"
+    src="ImgProyectosPersonales/e-store.webp"
+  >
+    <div class="flex gap-2 mb-5 flex-wrap">
+      <ChipAngular />
+      <ChipTailwind />
+    </div>
+    <p>
+      e-Store es una tienda web creada como parte del curso de platzi de
+      Creación de aplicación web, en la cual aprendí a utilizar angular y
+      conocer la sintaxis antigua como la nueva.
+    </p>
+
+    <div class="flex">
+      <BotonEnlace
+        href="https://github.com/desteban/e-store"
         title="Codigo del proyecto"
         classname="mx-2 font-semibold text-[var(--tertiary)]"
         targetBlank
