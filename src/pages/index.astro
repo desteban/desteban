@@ -16,6 +16,9 @@ import GitHubIcono from "@iconos/GitHubIcono.astro";
 import Foto from "@img/Foto-perfil.webp";
 import Estudios from "@components/secciones/Estudios/Estudios.astro";
 import Copy from "@iconos/Copy.astro";
+import CorreoContacto from "@components/UI/CorreoContacto.astro";
+
+const correo: string = "soy-esteban@outlook.com.co";
 ---
 
 <Layout
@@ -65,16 +68,18 @@ import Copy from "@iconos/Copy.astro";
             class={`rounded-full text-sm text-[var(--tertiary)] border border-primary flex items-center overflow-hidden`}
           >
             <a
-              href="mailto:soy-esteban@outlook.com"
+              href={`mailto:${correo}`}
               class="px-2 pl-3 py-1 text-[var(--tertiary)] no-underline transition ease-in duration-300 hover:backdrop-blur-md hover:bg-slate-50 hover:bg-opacity-10 hover:border-secondary cursor-pointer"
             >
-              soy-esteban@outlook.com
+              <CorreoContacto />
             </a>
 
             <button
               data-copy-button
+              data-email={correo}
               class="px-2 py-1 pr-3 flex gap-2 no-underline transition ease-in duration-300 hover:backdrop-blur-md hover:bg-slate-50 hover:bg-opacity-10 hover:border-secondary border-l-2 border-l-primary"
               aria-label="Copiar correo"
+              title="Copiar correo"
             >
               <Copy />
             </button>
@@ -156,10 +161,11 @@ import Copy from "@iconos/Copy.astro";
     .querySelector("[data-copy-button]")
     .addEventListener("click", copyMail);
 
-  function copyMail() {
-    new Promise((resolve, rejectet) => {
+  function copyMail(event: Event) {
+    const button = event.currentTarget as HTMLElement;
+    new Promise(() => {
       try {
-        navigator.clipboard.writeText("soy-esteban@outlook.com");
+        navigator.clipboard.writeText(button.dataset.email);
         alert("Correo copiado al portapapeles");
       } catch (error) {
         alert("No se pudo copiar el correo");
