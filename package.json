@@ -3,29 +3,29 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
+    "dev": "astro dev --host",
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "check": "astro check"
   },
   "dependencies": {
-    "@astrojs/check": "0.4.1",
-    "@astrojs/react": "3.6.2",
-    "@astrojs/svelte": "5.0.3",
-    "@astrojs/tailwind": "5.1.0",
-    "@astrojs/ts-plugin": "1.8.0",
+    "@astrojs/check": "0.9.4",
+    "@astrojs/react": "4.3.0",
+    "@astrojs/tailwind": "6.0.2",
+    "@astrojs/ts-plugin": "1.10.4",
     "@vercel/speed-insights": "^1.2.0",
-    "astro": "^4.16.18",
+    "astro": "^5.10.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "svelte": "^4.2.19",
+    "svelte": "^4.2.20",
     "tailwindcss": "^3.4.17",
-    "typescript": "^5.8.2"
+    "typescript": "^5.8.3"
   },
-  "packageManager": "pnpm@9.4.0",
   "devDependencies": {
     "@types/react": "18.3.11",
     "@types/react-dom": "18.3.1"
-  }
+  },
+  "packageManager": "pnpm@10.12.1+sha512.f0dda8580f0ee9481c5c79a1d927b9164f2c478e90992ad268bbb2465a736984391d6333d2c327913578b2804af33474ca554ba29c04a8b13060a717675ae3ac"
 }
