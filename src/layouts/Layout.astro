@@ -1,25 +1,33 @@
 ---
+import type { OpenGraph } from "@globals/OpenGraph";
 import "../base.css";
-import  SpeedInsights  from "@vercel/speed-insights/astro"
+import SpeedInsights from "@vercel/speed-insights/astro";
 
 interface Props {
   title: string;
   description?: string;
+  OpenGraph?: OpenGraph[];
 }
 
-const { title, description } = Astro.props;
+const { title, description, OpenGraph } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="es-CO">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <!-- <meta name="generator" content={Astro.generator} /> -->
     <title>{title}</title>
     <meta name="description" content={description} />
+
+    {
+      OpenGraph &&
+        OpenGraph.map((og) => (
+          <meta property={og.property} content={og.content} />
+        ))
+    }
   </head>
   <body>
     <SpeedInsights />

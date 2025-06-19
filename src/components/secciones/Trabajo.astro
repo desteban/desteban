@@ -20,7 +20,7 @@ const { cargo, empresa, fechaInicial, datetimeFin, datetimeInicio, fechaFin } =
     <h4 class="capitalize">{empresa}</h4>
     <time datetime={datetimeInicio}>{fechaInicial}</time>
     {fechaFin ? "-" : ""}
-    {fechaFin ? <time datetime={datetimeFin}>{fechaFin}</time> : ""}
+    {fechaFin ? <time datetime={datetimeFin}>{fechaFin}</time> : "- Actualidad"}
   </div>
 
   <div class="md:col-span-3">
