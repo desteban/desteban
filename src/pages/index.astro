@@ -19,23 +19,37 @@ import Copy from "@iconos/Copy.astro";
 import CorreoContacto from "@components/UI/CorreoContacto.astro";
 import { OpenGraphProperties, type OpenGraph } from "@globals/OpenGraph";
 
+const description =
+  "Más de 2 años de experiencia como Desarrollador Frontend y Web. Enfocado en React, Next.js, PHP y TypeScript, desarrollando APIs y mejorando interfaces de usuario.";
 const correo: string = "soy-esteban@outlook.com.co";
-
+const keywords: string[] = [
+  "Desarrollador frontend",
+  "desarrollador web",
+  "ingeniero de sistemas",
+  "programador fullstack",
+  "react",
+  "astro",
+  "TypeScript",
+  "next.js",
+  "rest",
+];
 const og: OpenGraph[] = [
   {
     property: OpenGraphProperties.TITLE,
     content: "Portafolio de David Cubillos",
   },
-  { property: OpenGraphProperties.TYPE, content: "website" },
-  { property: OpenGraphProperties.URL, content: "https://desteban.tech" },
+  { property: OpenGraphProperties.DESCRIPTION, content: description },
   { property: OpenGraphProperties.IMAGE, content: Foto.src },
+  { property: OpenGraphProperties.URL, content: "https://desteban.tech" },
+  { property: OpenGraphProperties.TYPE, content: "website" },
 ];
 ---
 
 <Layout
-  title="Portafolio"
-  description="Hola, soy David. Desarrollador web con mas de 2 años de experiencia."
+  title="David Cubillos | Desarrollador Frontend"
+  description={description}
   OpenGraph={og}
+  keywords={keywords}
 >
   <main class="relative">
     <Header />

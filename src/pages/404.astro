@@ -3,7 +3,10 @@ import Layout from "@layouts/Layout.astro";
 import NotFound from "@img/page_not_found.svg";
 ---
 
-<Layout title="Not Found">
+<Layout
+  title="Not Found"
+  description="Pagina no encontrada, te recomendamos regresar al inicio"
+>
   <div class="container flex flex-col items-center justify-center h-svh">
     <figure class="md:max-w-sm mb-6">
       <img src={NotFound.src} alt="Imagen de pagina no encontrada." />

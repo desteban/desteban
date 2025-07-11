@@ -5,11 +5,15 @@ import SpeedInsights from "@vercel/speed-insights/astro";
 
 interface Props {
   title: string;
-  description?: string;
+  description: string;
   OpenGraph?: OpenGraph[];
+  keywords?: string[] | string;
 }
 
-const { title, description, OpenGraph } = Astro.props;
+const { title, description, OpenGraph, keywords } = Astro.props;
+const keywordsString = Array.isArray(keywords)
+  ? keywords.join(", ")
+  : keywords || null;
 ---
 
 <!doctype html>
@@ -18,9 +22,9 @@ const { title, description, OpenGraph } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <!-- <meta name="generator" content={Astro.generator} /> -->
     <title>{title}</title>
     <meta name="description" content={description} />
+    {keywordsString && <meta name="keywords" content={keywordsString} />}
 
     {
       OpenGraph &&
@@ -28,6 +32,7 @@ const { title, description, OpenGraph } = Astro.props;
           <meta property={og.property} content={og.content} />
         ))
     }
+    <link rel="sitemap" href="/sitemap-index.xml" />
   </head>
   <body>
     <SpeedInsights />
