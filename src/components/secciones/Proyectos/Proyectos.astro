@@ -17,6 +17,32 @@ import ChipJS from "@components/UI/Chips/ChipJS.astro";
 
 <div class="flex flex-col gap-7 md:[&>*:nth-child(odd)]:flex-row-reverse">
   <Proyecto
+    Titulo="DevSencillo"
+    alt="Landing Page de DevSencillo"
+    src="/ImgProyectosPersonales/DevSencillo.webp"
+  >
+    <div class="flex gap-2 mb-5 flex-wrap">
+      <ChipAstro />
+      <ChipTailwind />
+    </div>
+
+    <p>
+      Diseñé la landing page utilizando Tailwind CSS y Astro. En este proyecto
+      aprendí a utilizar las View Transitions.
+    </p>
+
+    <div class="flex">
+      <Enlace
+        href="https://devsencillo.com"
+        texto="DevSencillo"
+        title="Pagina de DevSencillo | Estudio de Desarrollo"
+        targetBlank
+        classname="mx-2 font-semibold text-[var(--tertiary)]"
+      />
+    </div>
+  </Proyecto>
+
+  <Proyecto
     Titulo="BotaniCo"
     alt="Template de BotaniCo"
     src="/ImgProyectosPersonales/BotaniCo.webp"
@@ -124,7 +150,6 @@ import ChipJS from "@components/UI/Chips/ChipJS.astro";
     </div>
   </Proyecto>
 </div>
-
 <style>
   p {
     line-height: 1.5rem;
