@@ -10,9 +10,28 @@ import ChipPrisma from "@components/UI/Chips/ChipPrisma.astro";
 import ChipPostgres from "@components/UI/Chips/chipPostgres.astro";
 import ChipAstro from "@components/UI/Chips/ChipAstro.astro";
 import ChipAngular from "@components/UI/Chips/ChipAngular.astro";
+import ChipHtml from "@components/UI/Chips/ChipHtml.astro";
+import ChipCss from "@components/UI/Chips/ChipCss.astro";
+import ChipJS from "@components/UI/Chips/ChipJS.astro";
 ---
 
 <div class="flex flex-col gap-7 md:[&>*:nth-child(odd)]:flex-row-reverse">
+  <Proyecto
+    Titulo="BotaniCo"
+    alt="Template de BotaniCo"
+    src="/ImgProyectosPersonales/BotaniCo.webp"
+  >
+    <div class="flex gap-2 mb-5 flex-wrap">
+      <ChipHtml />
+      <ChipCss />
+      <ChipJS />
+    </div>
+    <p>
+      Un diseño fresco y natural, ideal para negocios de plantas y jardinería,
+      con un enfoque en la estética visual y la facilidad de navegación.
+    </p>
+  </Proyecto>
+
   <Proyecto
     Titulo="Luks"
     alt="Pagina de Luks"
