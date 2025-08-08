@@ -1,9 +1,6 @@
 ---
 import Proyecto from "./Proyecto.astro";
 import Enlace from "@components/UI/Enlaces/Enlace.astro";
-import BotonEnlace from "@components/UI/Enlaces/BotonEnlace.astro";
-
-import GitHubIcono from "@iconos/GitHubIcono.astro";
 import CihipNext from "@components/UI/Chips/CihipNext.astro";
 import ChipTailwind from "@components/UI/Chips/ChipTailwind.astro";
 import ChipPrisma from "@components/UI/Chips/ChipPrisma.astro";
@@ -13,6 +10,7 @@ import ChipAngular from "@components/UI/Chips/ChipAngular.astro";
 import ChipHtml from "@components/UI/Chips/ChipHtml.astro";
 import ChipCss from "@components/UI/Chips/ChipCss.astro";
 import ChipJS from "@components/UI/Chips/ChipJS.astro";
+import CodeLink from "./CodeLink.astro";
 ---
 
 <div class="flex flex-col gap-7 md:[&>*:nth-child(odd)]:flex-row-reverse">
@@ -56,6 +54,12 @@ import ChipJS from "@components/UI/Chips/ChipJS.astro";
       Un diseño fresco y natural, ideal para negocios de plantas y jardinería,
       con un enfoque en la estética visual y la facilidad de navegación.
     </p>
+
+    <div class="flex">
+      <CodeLink
+        href="https://github.com/desteban/Templates/tree/main/BotaniCo"
+      />
+    </div>
   </Proyecto>
 
   <Proyecto
@@ -88,14 +92,7 @@ import ChipJS from "@components/UI/Chips/ChipJS.astro";
         classname="mx-2 font-semibold text-[var(--tertiary)]"
       />
 
-      <BotonEnlace
-        href="https://github.com/desteban/Luks"
-        title="Codigo del proyecto"
-        classname="mx-2 font-semibold text-[var(--tertiary)]"
-        targetBlank
-      >
-        <GitHubIcono /> Codigo
-      </BotonEnlace>
+      <CodeLink href="https://github.com/desteban/Luks" />
     </div>
   </Proyecto>
 
@@ -112,14 +109,7 @@ import ChipJS from "@components/UI/Chips/ChipJS.astro";
     <p>Clon de la pagina de Medium, con la tecnología Astro y Tailwind CSS.</p>
 
     <div class="flex">
-      <BotonEnlace
-        href="https://github.com/desteban/medium-clone"
-        title="Codigo del proyecto"
-        classname="mx-2 font-semibold text-[var(--tertiary)]"
-        targetBlank
-      >
-        <GitHubIcono /> Codigo
-      </BotonEnlace>
+      <CodeLink href="https://github.com/desteban/medium-clone" />
     </div>
   </Proyecto>
 
@@ -139,14 +129,7 @@ import ChipJS from "@components/UI/Chips/ChipJS.astro";
     </p>
 
     <div class="flex">
-      <BotonEnlace
-        href="https://github.com/desteban/e-store"
-        title="Codigo del proyecto"
-        classname="mx-2 font-semibold text-[var(--tertiary)]"
-        targetBlank
-      >
-        <GitHubIcono /> Codigo
-      </BotonEnlace>
+      <CodeLink href="https://github.com/desteban/e-store" />
     </div>
   </Proyecto>
 </div>

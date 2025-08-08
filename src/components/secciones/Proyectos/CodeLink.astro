@@ -1,0 +1,23 @@
+---
+import BotonEnlace from "@components/UI/Enlaces/BotonEnlace.astro";
+import GitHubIcono from "@iconos/GitHubIcono.astro";
+
+interface Props {
+  href: string;
+  title?: string;
+  class?: string;
+  targetBlank?: boolean;
+}
+
+const props = Astro.props;
+const { title = "Código del proyecto", targetBlank = true } = props;
+---
+
+<BotonEnlace
+  {...props}
+  title={title}
+  targetBlank={targetBlank}
+  classname=`mx-2 font-semibold text-[var(--tertiary)] ${props.class}`
+>
+  <GitHubIcono /> Código
+</BotonEnlace>
