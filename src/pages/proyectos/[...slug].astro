@@ -1,0 +1,26 @@
+---
+import type { GetStaticPaths } from "astro";
+import Layout from "@layouts/Layout.astro";
+import { getCollection, render } from "astro:content";
+import { CollectionsTags } from "src/content/config";
+import Header from "@components/Header.astro";
+
+export const getStaticPaths = (async () => {
+  const projects = await getCollection(CollectionsTags.projects);
+  return projects.map((project) => ({
+    params: { slug: project.id },
+    props: { project },
+  }));
+}) satisfies GetStaticPaths;
+
+const { project } = Astro.props;
+const { title, description, tags } = project.data;
+const { Content } = await render(project);
+---
+
+<Layout title={title} description={description} keywords={tags}>
+  <Header />
+  <main>
+    <Content />
+  </main>
+</Layout>
