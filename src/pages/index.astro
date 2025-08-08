@@ -183,15 +183,15 @@ const og: OpenGraph[] = [
 </Layout>
 
 <script>
-  document
-    .querySelector("[data-copy-button]")
-    .addEventListener("click", copyMail);
+  const copybutton = document.querySelector("button[data-copy-button]");
+
+  copybutton?.addEventListener("click", copyMail);
 
   function copyMail(event: Event) {
     const button = event.currentTarget as HTMLElement;
     new Promise(() => {
       try {
-        navigator.clipboard.writeText(button.dataset.email);
+        navigator.clipboard.writeText(button.dataset.email ?? "");
         alert("Correo copiado al portapapeles");
       } catch (error) {
         alert("No se pudo copiar el correo");

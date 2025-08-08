@@ -1,0 +1,66 @@
+---
+title: "Luks. Controla tus gastos"
+description: "Aprende a controlar tus gastos con Luks, una herramienta de gestión financiera que te ayuda a organizar tus ingresos y gastos de manera efectiva."
+tags:
+  [
+    "control de gastos",
+    "gestión financiera",
+    "Luks",
+    "organización financiera",
+    "planificación financiera",
+    "presupuesto",
+    "gestión de ingresos y gastos",
+  ]
+---
+
+import Container from "@components/Container.astro";
+import ImgLandScape from "./components/ImgLandScape.astro";
+import Enlace from "@components/UI/Enlaces/Enlace.astro";
+import CihipNext from "@components/UI/Chips/CihipNext.astro";
+import ChipTailwind from "@components/UI/Chips/ChipTailwind.astro";
+import ChipPrisma from "@components/UI/Chips/ChipPrisma.astro";
+import ChipPostgres from "@components/UI/Chips/chipPostgres.astro";
+import ChipHtml from "@components/UI/Chips/ChipHtml.astro";
+import GithubLink from "@components/UI/Enlaces/GithubLink.astro";
+import ChipTypeScript from "@components/UI/Chips/ChipTypeScript.astro";
+
+<Container>
+# Luks
+
+<div className="flex space-x-2 mb-4">
+  <GithubLink href="https://github.com/desteban/Luks" />
+</div>
+
+_Desarrollado con_
+
+<div class="flex gap-2 mb-5 flex-wrap">
+  <CihipNext />
+  <ChipTailwind />
+  <ChipPrisma />
+  <ChipPostgres />
+  <ChipTypeScript />
+  <ChipHtml />
+</div>
+
+A todos nos ha pasado que no sabemos que pasa con nuestro dinero, ¿cómo podemos controlar nuestros gastos? ¿Cómo podemos saber si estamos
+estamos gastando más de lo que deberíamos? ¿Cómo podemos saber si estamos ahorrando lo suficiente?. **Luks** es una herramienta de gestión
+financiera que te ayuda a organizar tus ingresos y gastos de manera fácil.
+
+<ImgLandScape
+  src="/ImgProyectosPersonales/Luks/Luks.avif"
+  alt="Página principal de Luks"
+/>
+
+<div className="space">
+  ## Desafíos y Aprendizajes 
+  
+- **Manejo de exenciones**: Aprendí a utilizar un
+Either, el cual es un tipo de dato el cual tiene dos posibles tipos, uno para
+el caso de éxito y otro para el caso de error. Gracias al cual pude manejar
+las exenciones de manera más fácil y elegante.
+- **Base de datos**: Fue la primera vez que utilicé PostgreSQL como gestor de
+base de datos. Al utilizar un ORM como <a href="https://www.prisma.io" target="_blank">Prisma</a>
+fue mucho más simple manipular la información de la base de datos.
+</div>
+
+</Container>
