@@ -28,9 +28,9 @@ export default defineConfig({
         //   item.priority = 1;
         // }
 
-        if (/proyectos\/luks/.test(item.url)) {
-          return undefined;
-        }
+        // if (/proyectos\/luks/.test(item.url)) {
+        //   return undefined;
+        // }
 
         item.lastmod = new Date();
         item.changefreq = changefreq.monthly;

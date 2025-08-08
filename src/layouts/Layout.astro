@@ -8,12 +8,34 @@ interface Props {
   description: string;
   OpenGraph?: OpenGraph[];
   keywords?: string[] | string;
+  index?: boolean;
+  follow?: boolean;
 }
 
-const { title, description, OpenGraph, keywords } = Astro.props;
+const {
+  title,
+  description,
+  OpenGraph,
+  keywords,
+  follow = true,
+  index = true,
+} = Astro.props;
 const keywordsString = Array.isArray(keywords)
   ? keywords.join(", ")
   : keywords || null;
+
+let metaRobots = "";
+if (index) {
+  metaRobots += "index";
+} else {
+  metaRobots += "noindex";
+}
+
+if (follow) {
+  metaRobots += ", follow";
+} else {
+  metaRobots += ", nofollow";
+}
 ---
 
 <!doctype html>
@@ -33,6 +55,7 @@ const keywordsString = Array.isArray(keywords)
         ))
     }
     <link rel="sitemap" href="/sitemap-index.xml" />
+    <meta name="robots" content={metaRobots} />
   </head>
   <body>
     <SpeedInsights />
