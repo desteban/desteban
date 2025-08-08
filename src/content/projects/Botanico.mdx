@@ -1,5 +1,5 @@
 ---
-title: "BotaniCo: Plantilla HTML, CSS y JavaScript para Tiendas de Plantas Online"
+title: "BotaniCo Template HTML"
 description: "Descubre BotaniCo, una plantilla web responsive para viveros y tiendas de plantas, creada con HTML, CSS y JavaScript. Ideal para ecommerce botánico con diseño moderno."
 tags:
   [
@@ -16,49 +16,63 @@ tags:
 
 import Container from "@components/Container.astro";
 import ImgLandScape from "./components/ImgLandScape.astro";
+// import ImgPortrait from './components/ImgPortrait.astro'
+import ChipHtml from "@components/UI/Chips/ChipHtml.astro";
+import ChipCss from "@components/UI/Chips/ChipCss.astro";
+import ChipJS from "@components/UI/Chips/ChipJS.astro";
+import GithubLink from "@components/UI/Enlaces/GithubLink.astro";
+import Enlace from "@components/UI/Enlaces/Enlace.astro";
 
 <Container>
 <div class="my-10">
 # BotaniCo
 
-Si estás buscando una forma elegante, moderna y funcional de mostrar tu catálogo de plantas en línea, **BotaniCo**
-es una plantilla web creada con **HTML, CSS y JavaScript** que combina diseño atractivo y facilidad de uso.
+<div className="flex space-x-2 mb-4">
+  <GithubLink href="https://github.com/desteban/Templates/tree/main/BotaniCo" />
+  <Enlace
+    href="https://desteban.github.io/Templates/BotaniCo"
+    texto="Preview"
+    title="Botanico"
+    targetBlank
+  />
+</div>
 
-Ideal para viveros, floristerías y negocios que venden productos botánicos, esta plantilla está pensada para ofrecer
-una experiencia de usuario agradable, rápida y adaptada a dispositivos móviles.
+_Desarrollado con_
+
+<div class="flex gap-2 mb-5 flex-wrap">
+  <ChipHtml />
+  <ChipCss />
+  <ChipJS />
+</div>
+
+La página principal (index) fue diseñado por <a href="https://www.behance.net/lesyladriano" target="_blank">Lesy Adriano</a>
+
+Este proyecto, **BotaniCo**, es una plataforma de comercio electrónico diseñada para llevar la naturaleza y el bienestar a los hogares a través
+de la venta de plantas y la provisión de consejos de cuidado. Fue desarrollado íntegramente por mí, desde el diseño visual hasta la
+implementación de las funcionalidades interactivas
 
 </div>
 
 <ImgLandScape
-  src="/ImgProyectosPersonales/BotaniCo.webp"
+  src="/ImgProyectosPersonales/Botanico/BotaniCo.webp"
   alt="Template de BotaniCo"
 />
 
-<div>
 <div class="my-10">
-## 📌 Características principales
-<div className="px-6">
-- **Diseño responsive:** Adaptable a móviles, tabletas y pantallas grandes.
-- **Interfaz moderna y limpia:** Colores suaves y tipografía clara para destacar imágenes y textos.
-- **Secciones organizadas:** Inicio, Tienda, Cuidados, Nosotros, entre otras.
-- **Catálogo dinámico:** Fichas de producto con fotos, precios y descripciones.
-- **Consejos de cuidado para plantas:** Información sobre riego, luz, fertilización y poda.
-</div>
-
-<figure className="overflow-hidden max-h-[600px] aspect-[9/16] rounded-md flex items-center justify-center mx-auto my-6">
-<img src="/ImgProyectosPersonales/Botanico-sm.avif" alt="BotaniCo en la version para dispositivos móviles" className="object-contain h-full w-auto" />
-</figure>
+  ## ¿Qué es BotaniCo? BotaniCo es más que una simple tienda online; es un
+  espacio donde los amantes de las plantas pueden encontrar una variedad de
+  especies y aprender a cuidarlas adecuadamente. El sitio busca inspirar a los
+  usuarios a "*traer la naturaleza a su hogar*" y fomentar "*una vida mejor, una
+  planta a la vez*". Desde plantas decorativas hasta aromáticas, el catálogo
+  está diseñado para ofrecer opciones para todos los gustos y necesidades.
 </div>
 
 <div class="my-10">
-## 🌱 Ventajas de usar BotaniCo
-<div className="px-6">
-- **Carga rápida:** Código optimizado para mejorar la velocidad de tu web.
-- **Fácil personalización:** Ajusta colores, fuentes e imágenes según tu marca.
-- **Diseño enfocado en conversión:** Estructura que facilita que los visitantes se conviertan en clientes.
-- **SEO amigable:** Etiquetado correcto y estructura semántica para mejorar tu posición en Google.
+## Desafíos y Aprendizajes
+- **Optimización de imágenes**: Aprendí a optimizar las imágenes para mejorar el rendimiento de la página y reducir el tamaño de archivo
+- **Animaciones**: Para darle un toque interactivo y dinámico decidí utilizar las *view transitions* de CSS, pues considero que le dan un
+toque distintivo a la página.
+- **SEO**: Conocí el <a href="https://ogp.me">protocolo Open Graph</a>, los cuales mejoran la experiencia del usuario al compartir contenido
+en redes sociales.
 </div>
-</div>
-</div>
-
 </Container>

@@ -1,9 +1,7 @@
 ---
-interface Props {
-  src: string;
-  alt: string;
-  title?: string;
-}
+import type { ImgProps } from './Props';
+
+interface Props extends ImgProps {}
 
 const props = Astro.props;
 ---

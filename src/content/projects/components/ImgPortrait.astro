@@ -1,0 +1,12 @@
+---
+import { type ImgProps } from "./Props";
+interface Props extends ImgProps {}
+
+const props = Astro.props;
+---
+
+<figure
+  class="overflow-hidden max-h-[600px] aspect-[9/16] rounded-md flex items-center justify-center mx-auto my-6"
+>
+  <img {...props} class="object-contain h-full w-auto" loading="lazy" />
+</figure>

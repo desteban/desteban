@@ -194,6 +194,7 @@
   ul,
   ol {
     margin: 0.8em 0;
+    max-width: 75ch;
   }
 
   ul {
@@ -204,8 +205,9 @@
     list-style: decimal;
   }
 
-  li{
+  li {
     margin-bottom: 0.5rem;
+    text-wrap: pretty;
   }
 
   @media screen and (min-width: 650px) {

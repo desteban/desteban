@@ -18,7 +18,11 @@ const { title, description, tags } = project.data;
 const { Content } = await render(project);
 ---
 
-<Layout title={title} description={description} keywords={tags}>
+<Layout
+  title={`David Cubillos | ${title}`}
+  description={description}
+  keywords={tags}
+>
   <Header />
   <main>
     <Content />

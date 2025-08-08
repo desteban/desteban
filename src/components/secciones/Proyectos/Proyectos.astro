@@ -10,7 +10,7 @@ import ChipAngular from "@components/UI/Chips/ChipAngular.astro";
 import ChipHtml from "@components/UI/Chips/ChipHtml.astro";
 import ChipCss from "@components/UI/Chips/ChipCss.astro";
 import ChipJS from "@components/UI/Chips/ChipJS.astro";
-import CodeLink from "./CodeLink.astro";
+import GithubLink from "@components/UI/Enlaces/GithubLink.astro";
 ---
 
 <div class="flex flex-col gap-7 md:[&>*:nth-child(odd)]:flex-row-reverse">
@@ -43,7 +43,7 @@ import CodeLink from "./CodeLink.astro";
   <Proyecto
     Titulo="BotaniCo"
     alt="Template de BotaniCo"
-    src="/ImgProyectosPersonales/BotaniCo.webp"
+    src="/ImgProyectosPersonales/Botanico/BotaniCo.webp"
   >
     <div class="flex gap-2 mb-5 flex-wrap">
       <ChipHtml />
@@ -52,12 +52,20 @@ import CodeLink from "./CodeLink.astro";
     </div>
     <p>
       Un diseño fresco y natural, ideal para negocios de plantas y jardinería,
-      con un enfoque en la estética visual y la facilidad de navegación.
+      con un enfoque en la estética visual y la facilidad de navegación. <a
+        href="/proyectos/botanico">Ver más de BotaniCo</a
+      >
     </p>
 
-    <div class="flex">
-      <CodeLink
+    <div class="flex space-x-2">
+      <GithubLink
         href="https://github.com/desteban/Templates/tree/main/BotaniCo"
+      />
+      <Enlace
+        href="https://desteban.github.io/Templates/BotaniCo"
+        texto="Preview"
+        title="Botanico"
+        targetBlank
       />
     </div>
   </Proyecto>
@@ -83,16 +91,16 @@ import CodeLink from "./CodeLink.astro";
       decisión.
     </p>
 
-    <div class="flex">
+    <div class="flex space-x-2">
       <Enlace
         href="https://luks.vercel.app"
         texto="Preview"
         title="Luks"
         targetBlank
-        classname="mx-2 font-semibold text-[var(--tertiary)]"
+        classname="font-semibold text-[var(--tertiary)]"
       />
 
-      <CodeLink href="https://github.com/desteban/Luks" />
+      <GithubLink href="https://github.com/desteban/Luks" />
     </div>
   </Proyecto>
 
@@ -109,7 +117,7 @@ import CodeLink from "./CodeLink.astro";
     <p>Clon de la pagina de Medium, con la tecnología Astro y Tailwind CSS.</p>
 
     <div class="flex">
-      <CodeLink href="https://github.com/desteban/medium-clone" />
+      <GithubLink href="https://github.com/desteban/medium-clone" />
     </div>
   </Proyecto>
 
@@ -129,7 +137,7 @@ import CodeLink from "./CodeLink.astro";
     </p>
 
     <div class="flex">
-      <CodeLink href="https://github.com/desteban/e-store" />
+      <GithubLink href="https://github.com/desteban/e-store" />
     </div>
   </Proyecto>
 </div>
