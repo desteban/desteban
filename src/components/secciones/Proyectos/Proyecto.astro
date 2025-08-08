@@ -3,9 +3,10 @@ interface Props {
   alt: string;
   src: string;
   Titulo: string;
+  transitionName?: string;
 }
 
-const { Titulo, alt, src } = Astro.props;
+const { Titulo, alt, src, transitionName } = Astro.props;
 ---
 
 <article
@@ -18,6 +19,9 @@ const { Titulo, alt, src } = Astro.props;
       src={src}
       alt={alt}
       class="w-full h-full object-cover transition ease-out duration-500 md:group-hover:scale-110"
+      style={transitionName
+        ? `view-transition-name: ${transitionName}`
+        : undefined}
     />
   </figure>
 

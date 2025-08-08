@@ -279,6 +279,10 @@
   }
 }
 
+@view-transition {
+  navigation: auto
+}
+
 @layer components {
   .visually-hidden {
     position: absolute !important;

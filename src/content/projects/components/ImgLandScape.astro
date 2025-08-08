@@ -1,13 +1,21 @@
 ---
-import type { ImgProps } from './Props';
+import type { ImgProps } from "./Props";
 
 interface Props extends ImgProps {}
 
 const props = Astro.props;
+const { transitionName } = props;
 ---
 
 <figure
   class="max-w-2xl rounded-md overflow-hidden flex items-center justify-center mx-auto aspect-video"
 >
-  <img {...props} loading="lazy" class="" />
+  <img
+    {...props}
+    loading="lazy"
+    class=""
+    style={transitionName
+      ? `view-transition-name: ${transitionName}`
+      : undefined}
+  />
 </figure>
