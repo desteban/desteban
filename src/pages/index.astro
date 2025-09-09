@@ -105,7 +105,10 @@ const og: OpenGraph[] = [
             <a
               href={`mailto:${correo}`}
               class="px-2 pl-3 py-1 text-[var(--tertiary)] no-underline transition ease-in duration-300 hover:backdrop-blur-md hover:bg-slate-50 hover:bg-opacity-10 hover:border-secondary cursor-pointer"
+              title="Enviar correo"
+              aria-label="Envíame un correo electrónico"
             >
+              <span class="visually-hidden">Envíame un correo electrónico</span>
               <CorreoContacto />
             </a>
 
