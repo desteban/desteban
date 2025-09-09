@@ -29,10 +29,30 @@ export const cursos: CursoD[] = [
   {
     alt: "Logo de Platzi",
     src: "/img/Platzi.svg",
+    titulo:
+      "Curso de Angular Forms: Creación y Optimización de Formularios Web",
+    href: "https://platzi.com/p/desteban/curso/2027-course/diploma/detalle/",
+    fechaExpedicion: new Date(2025, 7),
+    etiquetas: [
+      etiquetas.angular,
+      etiquetas.typescript,
+      etiquetas.tailwind,
+      etiquetas.css,
+      etiquetas.git,
+    ],
+  },
+  {
+    alt: "Logo de Platzi",
+    src: "/img/Platzi.svg",
     titulo: "Curso de Angular 17: Creación de Aplicaciones Web",
     href: "https://platzi.com/p/desteban/curso/8352-angular/diploma/detalle/",
     fechaExpedicion: new Date(2025, 0),
-    etiquetas: [etiquetas.angular, etiquetas.typescript, etiquetas.tailwind],
+    etiquetas: [
+      etiquetas.angular,
+      etiquetas.typescript,
+      etiquetas.tailwind,
+      etiquetas.git,
+    ],
   },
   {
     alt: "Logo de Platzi",

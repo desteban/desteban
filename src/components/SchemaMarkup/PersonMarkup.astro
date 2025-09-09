@@ -1,0 +1,49 @@
+---
+import { getEnvConfig } from "src/config/EnvConfig";
+
+const siteUrl = getEnvConfig().SITE_URL;
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "David Cubillos",
+  jobTitle: "Frontend Developer",
+  url: siteUrl,
+  description:
+    "Desarrollador frontend y de sistemas con más de dos años de experiencia en desarrollo web. Especializado en diseño y automatización de soluciones web.",
+  sameAs: [
+    "https://www.linkedin.com/in/tu-usuario-de-linkedin",
+    "https://github.com/tu-usuario-de-github",
+  ],
+  alumniOf: {
+    "@type": "Organization",
+    name: "Universidad de Cundinamarca",
+  },
+  knowsAbout: [
+    "Next.js",
+    "Tailwind CSS",
+    "Astro",
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "React",
+    "Angular",
+    "Prisma",
+    "PostgreSQL",
+    "TypeScript",
+  ],
+  //   worksFor: {
+  //     "@type": "Organization",
+  //     name: "Daku SAS",
+  //   },
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    url: siteUrl,
+  },
+};
+---
+
+<script
+  type="application/ld+json"
+  set:html={JSON.stringify(schema, null, 2)}
+  is:inline
+/>
