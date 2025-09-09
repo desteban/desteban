@@ -10,7 +10,7 @@ const { Titulo, alt, src, transitionName } = Astro.props;
 ---
 
 <article
-  class="w-full p-3 flex flex-col group overflow-hidden md:p-1 bg-[hsl(var(--background))] rounded-lg md:p-5 md:space-x-2 md:flex-row"
+  class="w-full p-3 flex flex-col group overflow-hidden bg-[hsl(var(--background))] rounded-lg md:p-5 md:space-x-2 md:flex-row"
 >
   <figure
     class="mb-3 md:mb-0 md:w-1/2 overflow-hidden group rounded-lg md:min-h-36"
@@ -22,6 +22,7 @@ const { Titulo, alt, src, transitionName } = Astro.props;
       style={transitionName
         ? `view-transition-name: ${transitionName}`
         : undefined}
+      loading="lazy"
     />
   </figure>
 
