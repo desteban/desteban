@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "preact/hooks";
 import Curso from "./Curso";
 import { cursos } from "@constants/cursos";
+import type { TargetedEvent } from "preact/compat";
 
 export default function Cursos() {
   const [cursoBuscar, setCursoBuscar] = useState<string>("");
@@ -13,9 +14,18 @@ export default function Cursos() {
       )
   );
 
+  const changeCurso = (e: TargetedEvent<HTMLInputElement>) => {
+    const { value } = e.currentTarget;
+    setCursoBuscar(value);
+  };
+
+  const sendForm = (e: TargetedEvent) => {
+    e.preventDefault();
+  };
+
   return (
     <div>
-      <form>
+      <form onSubmit={sendForm}>
         <label className="flex flex-col font-semibold">
           Buscar Cursos
           <input
@@ -24,7 +34,7 @@ export default function Cursos() {
             id="cursoBuscar"
             name="cursoBuscar"
             value={cursoBuscar}
-            onChange={(e) => setCursoBuscar(e.currentTarget.value)}
+            onInput={changeCurso}
             autoComplete="off"
           />
         </label>

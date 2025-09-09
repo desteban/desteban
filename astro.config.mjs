@@ -1,8 +1,8 @@
 import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
-import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 import mdx from "@astrojs/mdx";
+import preact from "@astrojs/preact";
 
 const changefreq = {
   always: "always",
@@ -18,20 +18,11 @@ const changefreq = {
 export default defineConfig({
   site: "https://desteban.tech",
   integrations: [
+    preact(),
     tailwind(),
-    react(),
     mdx(),
     sitemap({
       serialize(item) {
-        // if (/regex/.test(item.url)) {
-        //   item.lastmod = new Date();
-        //   item.priority = 1;
-        // }
-
-        // if (/proyectos\/luks/.test(item.url)) {
-        //   return undefined;
-        // }
-
         item.lastmod = new Date();
         item.changefreq = changefreq.monthly;
         item.priority = 1;

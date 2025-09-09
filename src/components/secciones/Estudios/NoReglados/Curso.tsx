@@ -1,6 +1,4 @@
 import type { CursoD } from "@constants/cursos";
-import React from "react";
-
 function EnlaceIcono({ size }: { size?: number }) {
   return (
     <svg
