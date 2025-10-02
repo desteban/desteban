@@ -15,7 +15,7 @@ const { href, classname, title, targetBlank = false } = Astro.props;
   aria-label={title + ", se abre en otra pestaña"}
   rel="noopener noreferrer"
   target={targetBlank ? "_blank" : null}
-  class={`px-3 py-1 rounded-full text-sm text-[var(--tertiary)] border border-primary flex w-min items-center gap-2 no-underline transition ease-in duration-300 hover:backdrop-blur-md hover:bg-slate-50 hover:bg-opacity-10 hover:border-secondary ${classname}`}
+  class={`px-3 py-1 rounded-full text-sm text-[var(--tertiary)] border border-primary flex w-fit items-center gap-2 no-underline transition ease-in duration-300 hover:backdrop-blur-md hover:bg-slate-50 hover:bg-opacity-10 hover:border-secondary ${classname}`}
 >
   <slot />
 </a>

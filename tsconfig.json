@@ -3,29 +3,16 @@
   "compilerOptions": {
     "strictNullChecks": true,
     "jsx": "react-jsx",
-    "baseUrl": ".",
     "paths": {
-      "@components/*": [
-        "./src/components/*"
-      ],
-      "@layouts/*": [
-        "./src/layouts/*"
-      ],
-      "@iconos/*": [
-        "./public/Icons/*"
-      ],
-      "@img/*": [
-        "./public/img/*"
-      ],
-      "@iconosFrame/*": [
-        "./public/frameworks/*"
-      ],
-      "@globals/*": [
-        "./src/Globals/*"
-      ],
-      "@constants/*": [
-        "./src/constants/*"
-      ]
+      "@components/*": ["./src/components/*"],
+      "@layouts/*": ["./src/layouts/*"],
+      "@iconos/*": ["./public/Icons/*"],
+      "@img/*": ["./public/img/*"],
+      "@iconosFrame/*": ["./public/frameworks/*"],
+      "@globals/*": ["./src/Globals/*"],
+      "@constants/*": ["./src/constants/*"],
+      "@assets/*": ["./src/assets/*"],
+      "@config/*": ["./src/config/*"]
     },
     "plugins": [
       {

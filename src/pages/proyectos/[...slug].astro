@@ -2,8 +2,8 @@
 import type { GetStaticPaths } from "astro";
 import Layout from "@layouts/Layout.astro";
 import { getCollection, render } from "astro:content";
-import { CollectionsTags } from "src/content/config";
 import Header from "@components/Header.astro";
+import { CollectionsTags } from "../../content/config";
 
 export const getStaticPaths = (async () => {
   const projects = await getCollection(CollectionsTags.projects);
@@ -24,7 +24,7 @@ const { Content } = await render(project);
   keywords={tags}
 >
   <Header />
-  <main class="py-10" >
+  <main class="py-10">
     <Content />
   </main>
 </Layout>

@@ -1,9 +1,9 @@
 import { useState } from "preact/hooks";
 import Curso from "./Curso";
 import { cursos } from "@constants/cursos";
-import type { TargetedEvent } from "preact/compat";
+import type { FormEventHandler, JSX } from "react";
 
-export default function Cursos() {
+export default function Cursos(): JSX.Element {
   const [cursoBuscar, setCursoBuscar] = useState<string>("");
 
   let listaCursos = cursos.filter(
@@ -14,12 +14,12 @@ export default function Cursos() {
       )
   );
 
-  const changeCurso = (e: TargetedEvent<HTMLInputElement>) => {
+  const changeCurso: FormEventHandler<HTMLInputElement> | undefined = (e) => {
     const { value } = e.currentTarget;
     setCursoBuscar(value);
   };
 
-  const sendForm = (e: TargetedEvent) => {
+  const sendForm: FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
   };
 
@@ -36,6 +36,7 @@ export default function Cursos() {
             value={cursoBuscar}
             onInput={changeCurso}
             autoComplete="off"
+            placeholder="Buscar por título o tecnología..."
           />
         </label>
       </form>

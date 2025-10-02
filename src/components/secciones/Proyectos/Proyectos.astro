@@ -11,9 +11,47 @@ import ChipHtml from "@components/UI/Chips/ChipHtml.astro";
 import ChipCss from "@components/UI/Chips/ChipCss.astro";
 import ChipJS from "@components/UI/Chips/ChipJS.astro";
 import GithubLink from "@components/UI/Enlaces/GithubLink.astro";
+
+import trelloClone from "@assets/projects/trello-clone.webp";
+import { TransitionNames } from "@constants/TransitionNames";
+import { Routes } from "@constants/Routes";
+
+const trelloCloneLink: string = `${Routes.proyectos}/trello-clone`;
 ---
 
 <div class="flex flex-col gap-7 md:[&>*:nth-child(odd)]:flex-row-reverse">
+  <Proyecto
+    Titulo="Trello Clone"
+    alt="Landing Page de DevSencillo"
+    src={trelloClone.src}
+    transitionName={TransitionNames["trelloClone"]}
+  >
+    <div class="flex gap-2 mb-5 flex-wrap">
+      <ChipAngular />
+      <ChipTailwind />
+    </div>
+
+    <p>
+      Desarrollé un clon de Trello, en este proyecto consolidé mis conocimientos
+      en Algular, Tailwind y aprendí a utilizar Anagular CDK. Todas estas
+      tecnologías me permitieron crear una aplicación web con algunas de las
+      funcionalidades más relevantes de trello. <a href={trelloCloneLink}
+        >Conoce más de Trello Clone</a
+      >.
+    </p>
+
+    <div class="flex">
+      <Enlace
+        href="https://trello-clone-ashy-beta.vercel.app/"
+        texto="Trello Clone"
+        title="Pagina de mi Trello Clone"
+        targetBlank
+        classname="mx-2 font-semibold text-[var(--tertiary)]"
+      />
+      <GithubLink href="https://github.com/desteban/trello-clone" />
+    </div>
+  </Proyecto>
+
   <Proyecto
     Titulo="DevSencillo"
     alt="Landing Page de DevSencillo"
@@ -45,7 +83,7 @@ import GithubLink from "@components/UI/Enlaces/GithubLink.astro";
     Titulo="BotaniCo"
     alt="Template de BotaniCo"
     src="/ImgProyectosPersonales/Botanico/BotaniCo.webp"
-    transitionName="data-copy-button"
+    transitionName={TransitionNames.botanico}
   >
     <div class="flex gap-2 mb-5 flex-wrap">
       <ChipHtml />

@@ -1,0 +1,90 @@
+---
+title: "Trello Clone"
+description: "Proyecto de clon de Trello creado para mi portafolio. Construido con Angular, Tailwind y Angular CDK, demostrando habilidades en interfaces modernas y usabilidad."
+tags:
+  [
+    "Trello Clone",
+    "Angular",
+    "Tailwind",
+    "Angular CDK",
+    "Portafolio",
+    "Proyecto Frontend",
+    "Drag and Drop",
+    "Gestor de tareas",
+    "Kanban",
+    "UI moderna",
+  ]
+---
+
+import Container from "@components/Container.astro";
+import GithubLink from "@components/UI/Enlaces/GithubLink.astro";
+import ChipTailwind from "@components/UI/Chips/ChipTailwind.astro";
+import ChipAngular from "@components/UI/Chips/ChipAngular.astro";
+import ChipCSS from "@components/UI/Chips/ChipCss.astro";
+import ImgLandScape from "./components/ImgLandScape.astro";
+import ChipTypeScript from "@components/UI/Chips/ChipTypeScript.astro";
+import boards from "@assets/projects/trello-clone.webp";
+import ExternalLink from "@components/UI/Enlaces/ExternalLink.astro";
+import board from "@assets/projects/trello-clone/board.webp";
+import { TransitionNames } from "@constants/TransitionNames";
+
+<Container>
+# Trello Clone
+
+<div className="flex space-x-2 mb-4">
+  <GithubLink href="https://github.com/desteban/trello-clone" />
+</div>
+
+_Desarrollado con_
+
+<div class="flex gap-2 mb-5 flex-wrap">
+  <ChipTailwind />
+  <ChipAngular />
+  <ChipTypeScript />
+  <ChipCSS />
+</div>
+
+Este proyecto fue desarrollado utilizando los conocimientos adquiridos en el ruta de **Aprendizaje de Desarrollo Frontend con Angular**
+de platzi. En estos cursos consolidé mis conocimientos en Angular. Aprendí a utiliza Angular CDK para
+implementar funcionalidades como drag and drop, uso de overlays, acordeones, modales, entre otros.
+
+Puedes ver el <ExternalLink href="https://trello-clone-ashy-beta.vercel.app/">proyecto en vivo</ExternalLink>
+
+<ImgLandScape
+  src={boards.src}
+  alt="Pagina de tableros de Trello Clone"
+  transitionName={TransitionNames.trelloClone}
+/>
+
+## Características Principales
+
+Este clon de Trello incluye algunas de las características principales de trello como:
+
+- **Tableros y listas**: Podemos crear múltiples tableros y dentro de ellos, puedes crear listas para organizar tus tareas.
+- **Tarjetas**: Puedes crear tarjetas dentro de las listas las cuales representan tus tareas.
+- **Drag and Drop**: Puedes arrastras y soltar las tarjetas entre las listas para reorganizarlas
+- **Ventana modal**: Para mostrar el contenido de una tarjeta, se utiliza una ventana modal, en esta puedes ver los detalles
+  como su nombre, descripción y comentarios.
+
+<ImgLandScape
+  src={board.src}
+  alt="Tablero de Trello Clone con una tarjeta abierta"
+/>
+
+## Desafíos y aprendizajes
+
+Durante el desarrollado del proyecto uno de los principales desafíos fue crear componentes
+reutilizables utilizando **Angular CDK**. Esto me permitió crear crear **componentes más personalizados**
+y adaptarlos a las necesidades del proyecto.
+
+Agregar una librería como <ExternalLink href="https://swiperjs.com">Swiper</ExternalLink> para
+implementar un carrusel en la página index, fue otros desafió interesante, pues tenia que
+usar la version con **WebComponents** y adaptarla para poder utilizarla con Angular. Esta librería
+la agregúe porque me permitió hacer que que el usuario pueda mover los slides con el mouse o con el
+tacto, lo cual es una característica que considero mejora la experiencia del usuario sobre todo en
+dispositivos con pantallas táctiles.
+
+Animación al abrir un overlays. Quise agregar una **animación al momento de abrir un overlay**, la cual
+consiste en un efecto **fade in**, esta animación la logré utilizando **animaciones de CSS**
+
+</Container>

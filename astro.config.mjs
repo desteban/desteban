@@ -17,6 +17,21 @@ const changefreq = {
 // https://astro.build/config
 export default defineConfig({
   site: "https://desteban.tech",
+  vite: {
+    resolve: {
+      alias: {
+        "@components": "/src/components",
+        "@layouts": "/src/layouts",
+        "@iconos": "/public/Icons",
+        "@img": "/public/img",
+        "@iconosFrame": "/public/frameworks",
+        "@globals": "/src/Globals",
+        "@constants": "/src/constants",
+        "@assets": "/src/assets",
+        "@config": "/src/config",
+      },
+    },
+  },
   integrations: [
     preact(),
     tailwind(),

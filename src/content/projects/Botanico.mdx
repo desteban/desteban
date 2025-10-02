@@ -22,6 +22,7 @@ import ChipCss from "@components/UI/Chips/ChipCss.astro";
 import ChipJS from "@components/UI/Chips/ChipJS.astro";
 import GithubLink from "@components/UI/Enlaces/GithubLink.astro";
 import Enlace from "@components/UI/Enlaces/Enlace.astro";
+import { TransitionNames } from "@constants/TransitionNames";
 
 <Container>
 <div class="">
@@ -56,7 +57,7 @@ implementación de las funcionalidades interactivas
 <ImgLandScape
   src="/ImgProyectosPersonales/Botanico/BotaniCo.webp"
   alt="Template de BotaniCo"
-  transitionName="data-copy-button"
+  transitionName={TransitionNames.botanico}
 />
 
 <div class="my-10">

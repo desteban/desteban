@@ -5,5 +5,5 @@ const ENV = {
 };
 
 export function getEnvConfig() {
-  return ENV;
+  return { ...ENV };
 }

@@ -29,6 +29,22 @@ export const cursos: CursoD[] = [
   {
     alt: "Logo de Platzi",
     src: "/img/Platzi.svg",
+    titulo: "Desarrollo con C# y .NET",
+    href: "https://platzi.com/p/desteban/ruta/30067-desarrollo-frontend-angular/diploma/detalle",
+    fechaExpedicion: new Date(2025, 8),
+    etiquetas: [etiquetas.csharp, etiquetas.dotnet, etiquetas.git],
+  },
+  {
+    alt: "Logo de Platzi",
+    src: "/img/Platzi.svg",
+    titulo: "Desarrollo Frontend con Angular",
+    href: "https://platzi.com/p/desteban/ruta/30067-desarrollo-frontend-angular/diploma/detalle",
+    fechaExpedicion: new Date(2025, 8),
+    etiquetas: [etiquetas.angular, etiquetas.typescript, etiquetas.tailwind],
+  },
+  {
+    alt: "Logo de Platzi",
+    src: "/img/Platzi.svg",
     titulo:
       "Curso de Angular Forms: Creación y Optimización de Formularios Web",
     href: "https://platzi.com/p/desteban/curso/2027-course/diploma/detalle/",
