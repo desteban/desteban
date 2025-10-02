@@ -1,7 +1,8 @@
 import { useState } from "preact/hooks";
 import Curso from "./Curso";
 import { cursos } from "@constants/cursos";
-import type { FormEventHandler, JSX } from "react";
+import type { JSX } from "react";
+import type { InputEventHandler, SubmitEventHandler } from "preact";
 
 export default function Cursos(): JSX.Element {
   const [cursoBuscar, setCursoBuscar] = useState<string>("");
@@ -14,12 +15,12 @@ export default function Cursos(): JSX.Element {
       )
   );
 
-  const changeCurso: FormEventHandler<HTMLInputElement> | undefined = (e) => {
+  const changeCurso: InputEventHandler<HTMLInputElement> = (e) => {
     const { value } = e.currentTarget;
     setCursoBuscar(value);
   };
 
-  const sendForm: FormEventHandler<HTMLFormElement> = (e) => {
+  const sendForm: SubmitEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
   };
 
