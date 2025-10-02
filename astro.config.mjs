@@ -5,7 +5,6 @@ import mdx from "@astrojs/mdx";
 import preact from "@astrojs/preact";
 import { SerializePage } from "./src/config/SiteMap/Serialize";
 
-
 // https://astro.build/config
 export default defineConfig({
   site: "https://desteban.tech",

@@ -13,7 +13,7 @@ export const changefreq = {
   never: "never",
 };
 
-const pathProjects: string = "src/content/blog";
+const pathProjects: string = "src/content/projects";
 const regexProjects: RegExp = /proyecto/;
 const priorityProjects: number = 0.7;
 
@@ -49,16 +49,11 @@ export async function SerializePage(item: SitemapItem) {
  * @param {string} contentDir - La ruta del directorio donde se encuentra el archivo.
  * @returns {Date | null} - La fecha de última modificación o publicación del archivo, o `null` si no se puede obtener.
  */
-function getLastMod(slug: string, contentDir: string) {
+function getLastMod(slug: string, contentDir: string): Date | null {
   try {
     const filePath = join(contentDir, `${slug}.mdx`);
-    console.log("------------->filePath:", filePath);
     const fileContent = readFileSync(filePath, "utf-8");
-    console.log("fileContent cargado");
-
     const { data } = matter(fileContent);
-    console.log("Data extraida", data);
-
     return data.lastmod || data.publishDate;
   } catch (error) {
     console.log("Error a obtener los datos", error);
