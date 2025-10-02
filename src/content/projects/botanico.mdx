@@ -1,0 +1,81 @@
+---
+title: "BotaniCo Template HTML"
+description: "Descubre BotaniCo, una plantilla web responsive para viveros y tiendas de plantas, creada con HTML, CSS y JavaScript. Ideal para ecommerce botánico con diseño moderno."
+publishDate: 2025-09-02
+tags:
+  [
+    "plantilla HTML",
+    "CSS",
+    "JavaScript",
+    "tienda online",
+    "plantas",
+    "ecommerce",
+    "vivero",
+    "floristería",
+  ]
+---
+
+import Container from "@components/Container.astro";
+import ImgLandScape from "./components/ImgLandScape.astro";
+// import ImgPortrait from './components/ImgPortrait.astro'
+import ChipHtml from "@components/UI/Chips/ChipHtml.astro";
+import ChipCss from "@components/UI/Chips/ChipCss.astro";
+import ChipJS from "@components/UI/Chips/ChipJS.astro";
+import GithubLink from "@components/UI/Enlaces/GithubLink.astro";
+import Enlace from "@components/UI/Enlaces/Enlace.astro";
+import { TransitionNames } from "@constants/TransitionNames";
+
+<Container>
+<div class="">
+# BotaniCo
+
+<div className="flex space-x-2 mb-4">
+  <GithubLink href="https://github.com/desteban/Templates/tree/main/BotaniCo" />
+  <Enlace
+    href="https://desteban.github.io/Templates/BotaniCo"
+    texto="Preview"
+    title="Botanico"
+    targetBlank
+  />
+</div>
+
+_Desarrollado con_
+
+<div class="flex gap-2 mb-5 flex-wrap">
+  <ChipHtml />
+  <ChipCss />
+  <ChipJS />
+</div>
+
+La página principal (index) fue diseñado por <a href="https://www.behance.net/lesyladriano" target="_blank">Lesy Adriano</a>
+
+Este proyecto, **BotaniCo**, es una plataforma de comercio electrónico diseñada para llevar la naturaleza y el bienestar a los hogares a través
+de la venta de plantas y la provisión de consejos de cuidado. Fue desarrollado íntegramente por mí, desde el diseño visual hasta la
+implementación de las funcionalidades interactivas
+
+</div>
+
+<ImgLandScape
+  src="/ImgProyectosPersonales/Botanico/BotaniCo.webp"
+  alt="Template de BotaniCo"
+  transitionName={TransitionNames.botanico}
+/>
+
+<div class="my-10">
+  ## ¿Qué es BotaniCo? BotaniCo es más que una simple tienda online; es un
+  espacio donde los amantes de las plantas pueden encontrar una variedad de
+  especies y aprender a cuidarlas adecuadamente. El sitio busca inspirar a los
+  usuarios a "*traer la naturaleza a su hogar*" y fomentar "*una vida mejor, una
+  planta a la vez*". Desde plantas decorativas hasta aromáticas, el catálogo
+  está diseñado para ofrecer opciones para todos los gustos y necesidades.
+</div>
+
+<div class="my-10">
+## Desafíos y Aprendizajes
+- **Optimización de imágenes**: Aprendí a optimizar las imágenes para mejorar el rendimiento de la página y reducir el tamaño de archivo
+- **Animaciones**: Para darle un toque interactivo y dinámico decidí utilizar las *view transitions* de CSS, pues considero que le dan un
+toque distintivo a la página.
+- **SEO**: Conocí el <a href="https://ogp.me">protocolo Open Graph</a>, los cuales mejoran la experiencia del usuario al compartir contenido
+en redes sociales.
+</div>
+</Container>
